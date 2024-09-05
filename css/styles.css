@@ -1,0 +1,113 @@
+body{
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 2px 5px rgb(65, 65, 65);
+}
+
+.itens{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    padding-right: 3em;
+}
+
+header > .itens a{
+    margin-left: 5em;
+    margin-bottom: 0.3em;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+header > .itens p{
+    font-size: 1.1em;
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 12em;
+    padding-right: 12em;
+}
+
+.product{
+    width: 27em;
+    height: 40em;
+    border: 1px solid black;
+    border-radius: 1em;
+    text-align: center;
+}
+
+.product > img{
+    position: relative;
+    right: 0.2%;
+    bottom: 0.2%;
+    margin-top: 0em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border: 1px solid black;
+
+    height: 27em;
+    width: 100%;
+}
+
+.product > .product-info button{
+    width: 35%;
+    position: relative;
+    top: 2em;
+    opacity: 0;
+    border-radius: 2em;
+    cursor: pointer;
+    font-size: 1.3em;
+}
+
+.product:hover > .product-info button{
+    position: relative;
+    top: 0.4em;
+    width: 35%;
+    opacity: 100;
+    background-color: rgb(38, 194, 38);
+    transition: 0.3s;
+}
+
+.product-info > h2{
+    text-align: start;
+    font-size: 1.5em;
+    margin-left: 1em;
+    font-weight: 600;
+}
+
+.product-info > p{
+    font-size: 1em;
+    text-align: start;
+    margin-left: 1.6em;
+    margin-right: 1.6em;
+    font-weight: 300;
+}
+
+.ver{
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+}
+
+.ver > button{
+    width: 20vw;
+    height: 4vh;
+    font-size: 1em;
+    border-radius: 0.6em;
+
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.ver > button:hover{
+    background-color: rgb(34, 34, 34);
+    transform: scale(1.1);
+}

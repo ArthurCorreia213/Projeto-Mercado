@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    padding:0;
+    
+}
+
+
+section{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    /* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+
+width: 340px;
+height: 448px;
+
+border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 6px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+}
+
+.imag{
+    width: 100%;
+    height: 100%;
+    max-width: 340px;
+    max-height: 340px;
+    background-image: url(../imagens/jao-svg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 1;
+    border-radius: 5px;
+}
+
+#dois{
+    background-image: url(../imagens/celebro-svg.svg);
+
+}
+
+#tres{
+    background-image: url(../imagens/jujutsu-svg.svg);
+}
+.title{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 316px;
+    height: 28px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #000000;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+/* 
+configurando acoes: */
+
+.legenda{
+    padding: 10px 0;
+}
+.acoes{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+
+}
+
+.nomes{
+    display: flex;
+}
+
+.carac, .acoes{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.acoes button{
+    color: #6EB1F0;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13pt;
+}
+
+button:hover{
+    cursor: pointer;
+}

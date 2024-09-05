@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+
+    <style>
+    body{text-align: center;}
+    #carrinho-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 16px;
+        text-align: center;
+    }
+
+    .cart-item {
+        border: 1px solid #ccc;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart-item img {
+        max-width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .cart-item-info {
+        text-align: center;
+    }
+    #container{
+        border: 1px solid red;
+    }
+
+    </style>
+</head>
+<body>
+    <button onclick="adicionarAoCarrinho('Produto1', 10.99)">Produto 1</button>
+    <button onclick="adicionarAoCarrinho('Produto2', 30.99)">Produto 2</button>
+    <button onclick="adicionarAoCarrinho('Produto3', 50.99)">Produto 3</button>
+    <button onclick="adicionarAoCarrinho('Produto4', 10.99)">Produto 4</button>
+    <button onclick="adicionarAoCarrinho('Produto5', 30.99)">Produto 5</button>
+    <button onclick="adicionarAoCarrinho('Produto6', 50.99)">Produto 6</button>
+    <button onclick="adicionarAoCarrinho('Produto7', 10.99)">Produto 7</button>
+    <button onclick="adicionarAoCarrinho('Produto8', 30.99)">Produto 8</button>
+    <button onclick="adicionarAoCarrinho('Produto9', 50.99)">Produto 9</button>
+    <button onclick="adicionarAoCarrinho('Produto10', 10.99)">Produto 10</button>
+    <button onclick="adicionarAoCarrinho('Produto11', 30.99)">Produto 11</button>
+    <button onclick="adicionarAoCarrinho('Produto12', 50.99)">Produto 12</button>
+
+    <button onclick="atualizarCarrinho()">Atualizar</button>
+
+    <main id="container">
+        <div id="carrinho-grid" style="display: grid;"></div>
+        <div id="total" class="cart-total">Total: R$0,00</div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

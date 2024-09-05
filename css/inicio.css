@@ -1,0 +1,77 @@
+body{
+    padding: 0;
+    margin: 0;
+    
+}
+
+*{
+    border: 1px solid red;
+}
+.container{
+    display: grid;
+    grid-template-rows: 80px auto 1fr auto 50px;
+    grid-template-columns: 1fr 4fr 1fr;
+    height: 100vh;
+    grid-template-areas: 
+    "header header header"
+    "banner banner banner"
+    "esquerdo main-content direito"
+    "esquerdo main-content direito"
+    "esquerdo low-aside direito"
+    "footer footer footer"
+    ;
+
+    grid-gap: 10px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* 
+informação importante sobre grids: Pelo amor de Deus, não se esqueça de chmar ela, e dizer pro css que are a div tal vai pertencer na "area da grid", é coisa simples, mas me esqueci. igual mosytrado abaixo: */
+
+.header{
+    grid-area: header;
+}
+
+.banner{
+    grid-area: banner;
+}
+
+.main-content{
+    grid-area: main-content;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+.esquerdo{
+    grid-area: esquerdo;
+}
+
+.direito{
+    grid-area: direito;
+}
+
+.low-aside{
+    grid-area: low-aside;
+}
+
+@media (max-width: 678px) {
+
+        .container{
+            grid-template-rows: 50px 50px 50px 1fr 50px 50px 50px;
+            grid-auto-columns: 1fr;
+            grid-template-areas: 
+                "header header header"
+                "banner banner banner"
+                "esquerdo esquerdo esquerdo"
+                "main-content main-content main-content"
+                "direito direito direito"
+                "low-aside low-aside low-aside"
+                "footer footer footer"
+            ;
+        }
+
+}
