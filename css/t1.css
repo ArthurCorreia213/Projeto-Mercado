@@ -33,7 +33,7 @@ flex-grow: 1;
     height: 100%;
     max-width: 340px;
     max-height: 340px;
-    background-image: url(../imagens/jao-svg.svg);
+    /* background-image: url(../imagens/jao-svg.svg); */
     background-repeat: no-repeat;
     background-size: cover;
     flex: none;
@@ -43,14 +43,14 @@ flex-grow: 1;
     border-radius: 5px;
 }
 
-#dois{
+/* #dois{
     background-image: url(../imagens/celebro-svg.svg);
 
-}
+} */
 
-#tres{
+/* #tres{
     background-image: url(../imagens/jujutsu-svg.svg);
-}
+} */
 .title{
     font-family: "Roboto", sans-serif;
     font-weight: 400;

@@ -1,0 +1,187 @@
+{
+    "catalogo":[
+        {
+            "nome" : "Produto 1",
+            "tipo": "Tipo",
+            "preço": 1.99,
+            "quantidade": 1,
+            "imagem": "0"
+        }
+        ,
+        {
+            "nome": "Produto 2",
+            "tipo": "Tipo",
+            "preço": 9.99,
+            "quantidade": 1,
+            "imagem": 0
+        }
+        ,
+        {
+            "nome": "Produto 3",
+            "tipo": "Tipo",
+            "preço": 9.99,
+            "quantidade": 1,
+            "imagem": 0
+        }
+        ,
+        {
+            "nome": "Produto 4",
+            "tipo": "Tipo",
+            "preço": 9.99,
+            "quantidade": 1,
+            "imagem": 0
+        }
+        ,
+        {
+            "nome": "Produto 5",
+            "tipo": "Tipo",
+            "preço": 9.99,
+            "quantidade": 1,
+            "imagem": 0
+        }
+        ,
+        {
+            "nome": "Produto 6",
+            "tipo": "Tipo",
+            "preço": 9.99,
+            "quantidade": 1,
+            "imagem": 0
+        }
+        ,
+        {
+            "nome": "Produto 7",
+            "tipo": "Tipo",
+            "preço": 9.99,
+            "quantidade": 1,
+            "imagem": 0
+        }
+        ,
+        {
+            "nome": "Produto 8",
+            "tipo": "Tipo",
+            "preço": 9.99,
+            "quantidade": 1,
+            "imagem": 0
+        }
+        ,
+        {
+            "nome": "Produto 9",
+            "tipo": "Tipo",
+            "preço": 9.99,
+            "quantidade": 1,
+            "imagem": 0
+        }
+        ,
+        {
+            "nome": "Produto 10",
+            "tipo": "Tipo",
+            "preço": 9.99,
+            "quantidade": 1,
+            "imagem": 0
+        }
+        ,
+        {
+            "nome": "Produto 11",
+            "tipo": "Tipo",
+            "preço": 9.99,
+            "quantidade": 1,
+            "imagem": 0
+        }
+        ,
+        {
+            "nome": "Produto 12",
+            "tipo": "Tipo",
+            "preço": 9.99,
+            "quantidade": 1,
+            "imagem": 0
+        }
+        ,
+        {
+            "nome": "Produto 13",
+            "tipo": "Tipo",
+            "preço": 9.99,
+            "quantidade": 1,
+            "imagem": 0
+        }
+        ,
+        {
+            "nome": "Produto 14",
+            "tipo": "Tipo",
+            "preço": 9.99,
+            "quantidade": 1,
+            "imagem": 0
+        }
+        ,
+        {
+            "nome": "Produto 15",
+            "tipo": "Tipo",
+            "preço": 9.99,
+            "quantidade": 1,
+            "imagem": 0
+        }
+        ,
+        {
+            "nome": "Produto 16",
+            "tipo": "Tipo",
+            "preço": 9.99,
+            "quantidade": 1,
+            "imagem": 0
+        }
+        ,
+        {
+            "nome": "Produto 17",
+            "tipo": "Tipo",
+            "preço": 9.99,
+            "quantidade": 1,
+            "imagem": 0
+        }
+        ,
+        {
+            "nome": "Produto 18",
+            "tipo": "Tipo",
+            "preço": 9.99,
+            "quantidade": 1,
+            "imagem": 0
+        }
+        ,
+        {
+            "nome": "Produto 19",
+            "tipo": "Tipo",
+            "preço": 9.99,
+            "quantidade": 1,
+            "imagem": 0
+        }
+        ,
+        {
+            "nome": "Produto 20",
+            "tipo": "Tipo",
+            "preço": 9.99,
+            "quantidade": 1,
+            "imagem": 0
+        }
+        ,
+        {
+            "nome": "Produto 21",
+            "tipo": "Tipo",
+            "preço": 9.99,
+            "quantidade": 1,
+            "imagem": 0
+        }
+        ,
+        {
+            "nome": "Produto 22",
+            "tipo": "Tipo",
+            "preço": 9.99,
+            "quantidade": 1,
+            "imagem": 0
+        }
+        ,
+        {
+            "nome": "Produto 23",
+            "tipo": "Tipo",
+            "preço": 9.99,
+            "quantidade": 1,
+            "imagem": 0
+        }
+    ]
+}

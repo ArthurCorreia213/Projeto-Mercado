@@ -70,9 +70,62 @@ a{
     grid-area: main-content;
 }
 
+/* CONFIGURANDO FOOTER: */
+
 .footer{
     grid-area: footer;
+    background-color: #FFC700;
 }
+
+.footer h1{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18pt;
+}
+
+.titulo-f{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 40%;
+}
+
+.f-ti-p1{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13pt;
+}
+
+.f-ti-p1 .rede{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.icon-in, .icon-pi, .icon-wa{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+}
+
+.titulo-footer-confs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    gap: 40px;
+}
+
+
+/* fim rodapé */
 
 .esquerdo{
     grid-area: esquerdo;

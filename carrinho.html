@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho de Compras</title>
-
+    <link rel="stylesheet" href="css/t1.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
     <style>
-    body{text-align: center;}
-    #carrinho-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 16px;
+        /* *{border: 1px solid red;} */
+    /* body{text-align: center;} */
+    #carrinhoteste {
         text-align: center;
     }
 
     .cart-item {
-        border: 1px solid #ccc;
+        /* border: 1px solid #ccc; */
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
         padding: 10px;
         display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 
     .cart-item img {
@@ -27,35 +27,112 @@
         margin-bottom: 10px;
     }
 
-    .cart-item-info {
+    /* .cart-item-info {
         text-align: center;
-    }
+    } */
     #container{
-        border: 1px solid red;
+        /* border: 1px solid red; */
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
     }
 
+    #banner{
+        /* border: 1px solid red; */
+        display: flex;
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+    #banner-text{
+        /* border: 1px solid red; */
+        margin-left: 30%;
+        margin-top: 6%;
+    }
+    #tipo_produto{
+        width: 80%;
+    }
+    #total_comprar{
+        display: flex;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    #total{
+        width: 80%;
+        text-align: right;
+        padding-top: 2.5%;
+        padding-right: 10%;
+    }
+    #comprar{
+        width: 20%;
+        height: 80px;
+        border: 1px solid black;
+        border-radius: 10%;
+    }
     </style>
 </head>
 <body>
-    <button onclick="adicionarAoCarrinho('Produto1', 10.99)">Produto 1</button>
-    <button onclick="adicionarAoCarrinho('Produto2', 30.99)">Produto 2</button>
-    <button onclick="adicionarAoCarrinho('Produto3', 50.99)">Produto 3</button>
-    <button onclick="adicionarAoCarrinho('Produto4', 10.99)">Produto 4</button>
-    <button onclick="adicionarAoCarrinho('Produto5', 30.99)">Produto 5</button>
-    <button onclick="adicionarAoCarrinho('Produto6', 50.99)">Produto 6</button>
-    <button onclick="adicionarAoCarrinho('Produto7', 10.99)">Produto 7</button>
-    <button onclick="adicionarAoCarrinho('Produto8', 30.99)">Produto 8</button>
-    <button onclick="adicionarAoCarrinho('Produto9', 50.99)">Produto 9</button>
-    <button onclick="adicionarAoCarrinho('Produto10', 10.99)">Produto 10</button>
-    <button onclick="adicionarAoCarrinho('Produto11', 30.99)">Produto 11</button>
-    <button onclick="adicionarAoCarrinho('Produto12', 50.99)">Produto 12</button>
+    <div class="header">
+        <div class="titulo">
+            <div class="img"><a href="index.html"><img style="height: 40px;" src="imagens/icone1.svg" alt="icone"></a></div>
+            <div class="nome">Barbara Laís - Artesã</div>
+        </div>
 
-    <button onclick="atualizarCarrinho()">Atualizar</button>
+        <div class="links">
+            <div class="carrinho"><a href="imagens/carrinho.svg"><img height="30px" src="a.svg" alt=""></a></div>
+            <div class="home"><a href="index.html">Home</a></div>
+            <div class="loja"><a href="catalogo.html">Loja</a> </div>
+        </div>
 
+    </div>
+    <div id="banner">
+        <img src="imagens/carrinho.svg">
+        <h1 id="banner-text">SEU CARRINHO</h1>
+    </div>
     <main id="container">
-        <div id="carrinho-grid" style="display: grid;"></div>
-        <div id="total" class="cart-total">Total: R$0,00</div>
+        <div id="carrinhoteste"></div>
+        <div id="total_comprar">
+            <div id="total" class="cart-total">Total: R$0,00</div>
+            <button id="comprar">Comprar</button>
+        </div>
     </main>
-    <script src="scripts.js"></script>
+
+    <div class="footer">
+        <div class="footer-container">
+
+            <div class="f-ti-p1">
+                <div class="titulo-f">
+                    <h1>Siga-me nas redes:</h1>
+                </div>
+                <div class="redes">
+                    <div class="rede insta">
+                        <div class="icon-in"></div>
+                        <div>
+                            <p>@barbaralais_oficial</p>
+                        </div>
+                    </div>
+                    <div class="rede pinter">
+                        <div class="icon-pi"></div>
+                        <div>
+                            <p>barbaralaisartesa</p>
+                        </div>
+                    </div>
+                    <div class="rede whats">
+                        <div class="icon-wa"></div>
+                        <div>
+                            <p>(11) 97858-8187</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="titulo-footer-confs">
+                <div><p>São Paulo - SP</p></div>
+                <div><p>2024</p></div>
+            </div>
+        </div>
+    </div>
+    <script src="carrinho.js"></script>
 </body>
 </html>

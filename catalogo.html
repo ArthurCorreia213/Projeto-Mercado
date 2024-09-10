@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="css/t1.css">
+    <style>
+        *{border: 1px solid red;}
+        body{text-align: center;}
+        #catalogo-teste {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
+            text-align: center;
+            margin-left: 22%;
+            width: 60%;
+        }
+    
+        .cart-item {
+            /* border: 1px solid #ccc; */
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .cart-item img {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+    
+        .cart-item-info {
+            text-align: center;
+        }
+        #container{
+            /* border: 1px solid red; */
+            width: 60%;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+    
+        #banner{
+            /* border: 1px solid red; */
+            display: flex;
+            width: 60%;
+            margin-left: 20%;
+        }
+        #banner-text{
+            /* border: 1px solid red; */
+            margin-left: 30%;
+            margin-top: 6%;
+        }
+
+        #filtros{
+            width: 20%;
+            position: fixed;
+            float: inline-start;
+        }
+        /* main{display: flex;} */
+
+        </style>
+        <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+    <div class="header">
+        <div class="titulo">
+            <div class="img"><a href="inicio.html"><img style="height: 40px;" src="imagens/icone1.svg" alt="icone"></a></div>
+            <div class="nome">Barbara Laís - Artesã</div>
+        </div>
+
+        <div class="links">
+            <div class="carrinho"><a href="carrinho.html"><img height="30px" src="imagens/carrinho.svg" alt=""></a></div>
+            <div class="home"><a href="index.html">Home</a></div>
+            <div class="loja"><a href="catalogo.html">Loja</a> </div>
+        </div>
+    </div>
+
+    <main>
+        <div id="filtros"> Teste Filtos</div>
+        <div id="catalogo-teste"></div>
+        <script src="catalogo.js"></script>
+    </main>
+</body>
+</html>

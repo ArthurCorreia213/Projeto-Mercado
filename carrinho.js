@@ -28,7 +28,7 @@ function removerDoCarrinho(nome) {
 // Atualiza o carrinho na página
 function atualizarCarrinho() {
     const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-    const carrinhoContainer = document.getElementById('carrinho-grid');
+    const carrinhoContainer = document.getElementById('carrinhoteste');
     const totalContainer = document.getElementById('total');
     
     carrinhoContainer.innerHTML = '';
@@ -48,15 +48,12 @@ function atualizarCarrinho() {
 
         // Adiciona conteúdo ao item
         itemElement.innerHTML = `
-        <div>
-            <img src="${item.imagem}" alt="${item.nome}">
-            <div class="cart-item-info">
-                <h2>${item.nome}</h2>
-                <p>Preço: R$${item.preco.toFixed(2)}</p>
-                <p>Quantidade: ${item.quantidade}</p>
-                <p>Subtotal: R$${(item.preco * item.quantidade).toFixed(2)}</p>
-                <button onclick="removerDoCarrinho('${item.nome}')">Remover</button>
-            </div>
+        <div id="imagen"><img src="imagens/jao-svg.svg"></div>
+        <div id="tipo_produto">Funko Pop <h2 id="produto_nome">${item.nome}</h2></div>
+        <div id="valor_comprar">
+            R$${item.preco}<br><br>
+            Quantidade: ${item.quantidade}<br><br><br>
+            <button onclick="removerDoCarrinho('${item.nome}')">Remover</button>
         </div>
         `;
 
@@ -72,22 +69,11 @@ function atualizarCarrinho() {
 
 document.addEventListener('DOMContentLoaded', atualizarCarrinho);
 
-
-
-// Código do carrossel
-const box = document.querySelector('.container')
-const imagens = document.querySelectorAll('.container img')
-
-let contador = 0;
-
-function slider(){
-    contador++
-
-    if(contador > imagens.length - 1){
-        contador = 0
-    }
-
-    box.computedStyleMap.transform = `translateX(${-contador * 1600}px)`
-}
-
-setInterval(slider, 2000)
+{/* <img src="${item.imagem}" alt="${item.nome}">
+<div class="cart-item-info">
+    <h2>${item.nome}</h2>
+    <p>Preço: R$${item.preco.toFixed(2)}</p>
+    <p>Quantidade: ${item.quantidade}</p>
+    <p>Subtotal: R$${(item.preco * item.quantidade).toFixed(2)}</p>
+    <button onclick="removerDoCarrinho('${item.nome}')">Remover</button>
+</div> */}
