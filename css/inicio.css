@@ -126,7 +126,25 @@ a{
 
 
 /* fim rodapé */
+ 
+/* configurando produtos: */
+.aprt-produtos{
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18pt;
+}
 
+.aprt-produtos img{
+    padding-right: 20px;
+}
+
+.icon-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .esquerdo{
     grid-area: esquerdo;
 }

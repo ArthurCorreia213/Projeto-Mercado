@@ -12,6 +12,7 @@ section{
 
 .card{
     /* Auto layout */
+transition: 0.1s ease-in-out;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -27,6 +28,12 @@ flex: none;
 order: 0;
 flex-grow: 1;
 }
+
+/* 
+.card:hover{
+    background-color: rgba(228, 228, 228, 0.1);
+    transition: 0.1s ease-in-out;
+} */
 
 .imag{
     width: 100%;
@@ -60,7 +67,7 @@ flex-grow: 1;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 28px;
     color: #000000;
     flex: none;
@@ -75,6 +82,7 @@ configurando acoes: */
 
 .legenda{
     padding: 10px 0;
+    height: fit-content;
 }
 .acoes{
     display: flex;
@@ -91,6 +99,11 @@ configurando acoes: */
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+.carac{
+    font-size: 22px;
+    line-break: normal;
 }
 
 .acoes button{

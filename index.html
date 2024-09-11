@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/header.css">
+    <script src="scripts.js"></script>
 </head>
 <body>
     <header>
@@ -25,8 +26,17 @@
         </div>
     </header>
 
+    <div class="container">
+        <div class="carrossel">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </div>
+    </div>
+
     <div class="sombra">
-        <main>
+        <!-- <main>
             <section class="product">
                 <img src="https://via.placeholder.com/300" alt="Produto 1">
                 <div class="product-info">
@@ -53,9 +63,97 @@
                     <button onclick="adicionarAoCarrinho('Produto 3', 39.99)">🛒 - Comprar</button>
                 </div>
             </section>
-        </main>
-        <div class="ver">
+        </main> -->
+        <!-- <div class="ver">
             <button>Ver mais</button>
+        </div> -->
+
+        <div class="main-content">
+
+            <!-- <div class="aprt">
+                <div class="p1">
+                    <h1>Titulo</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic obcaecati vitae libero ea quos facilis temporibus nihil tempora officia ad quia eos explicabo sunt officiis, quae quasi tempore blanditiis consequatur?</p>
+                </div>
+                <div class="p2">
+                    IMAGEM
+                    <img src="" alt=""></img>
+                </div>
+            </div>
+
+            <div class="redes">
+                <div class="pinterest">
+                    pinterest
+                </div>
+                <div class="insta">Instagram</div>
+            </div> -->
+
+            <div class="produtos">
+                    <div class="aprt-produtos">
+                        <div class="icon"><img src="imagens/produtos-icone.svg" alt="icone-produtos"></div>
+                        <div class="icon-title"><h1>Produtos</h1></div>
+                    </div>
+                    
+                    <div class="produtos">
+                        <div class="cart-item-info">
+                            <div class="card 1" id="c1">
+                                <div class="imag" style="background-image: url(imagens/catalogo/figura_anne.png);"></div>
+                                <div class="legenda">
+                                    <div class="nomes">
+                                        <div class="names">
+                                            <div class="title">Figura</div>
+                                            <div class="carac">Figura | Anne</div>
+                                        </div>
+                                </div>
+                                    
+                                        <div class="acoes">
+                                            <div class="valor">🛒R$ 100,00</div>
+                                            <button onclick="adicionarAoCarrinho('${nome}', ${preço}, '${tipo}', '${imagem}' )">Adicionar Ao Carrinho</button>
+                                        </div>
+                                </div>
+                        </div>
+
+                        <div class="cart-item-info">
+                                <div class="card 1" id="c2">
+                                    <div class="imag" style="background-image: url(${imagem});"></div>
+                                    <div class="legenda">
+                                        <div class="nomes">
+                                            <div class="names">
+                                                <div class="title">${tipo}</div>
+                                                <div class="carac">${nome}</div>
+                                            </div>
+                                    </div>
+                                        
+                                            <div class="acoes">
+                                                <div class="valor">🛒R$${preço}</div>
+                                                <button onclick="adicionarAoCarrinho('${nome}', ${preço}, '${tipo}', '${imagem}' )">Adicionar Ao Carrinho</button>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cart-item-info">
+                                <div class="card 1" id="c3">
+                                    <div class="imag" style="background-image: url(${imagem});"></div>
+                                    <div class="legenda">
+                                        <div class="nomes">
+                                            <div class="names">
+                                                <div class="title">${tipo}</div>
+                                                <div class="carac">${nome}</div>
+                                            </div>
+                                    </div>
+                                        
+                                            <div class="acoes">
+                                                <div class="valor">🛒R$${preço}</div>
+                                                <button onclick="adicionarAoCarrinho('${nome}', ${preço}, '${tipo}', '${imagem}' )">Adicionar Ao Carrinho</button>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            
         </div>
 
         <div class="footer">

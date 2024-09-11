@@ -1,187 +1,179 @@
 {
     "catalogo":[
         {
-            "nome" : "Produto 1",
-            "tipo": "Tipo",
-            "preço": 1.99,
+            "nome" : "Funko Pop | Doutor Estranho",
+            "tipo": "Funko Pop",
+            "preço": 100.00,
             "quantidade": 1,
-            "imagem": "0"
+            "imagem":"imagens/catalogo/funko_dr_estranho.png"
         }
         ,
         {
-            "nome": "Produto 2",
-            "tipo": "Tipo",
-            "preço": 9.99,
+            "nome": "Figura | Coraline",
+            "tipo": "Figura",
+            "preço": 90.00,
             "quantidade": 1,
-            "imagem": 0
+            "imagem":"imagens/catalogo/figura_coraline.png"
         }
         ,
         {
-            "nome": "Produto 3",
-            "tipo": "Tipo",
-            "preço": 9.99,
+            "nome": "Figura | Tio Patinhas",
+            "tipo": "Figura",
+            "preço": 90.00,
             "quantidade": 1,
-            "imagem": 0
+            "imagem":"imagens/catalogo/figura_tio_patinhas.png"
         }
         ,
         {
-            "nome": "Produto 4",
-            "tipo": "Tipo",
-            "preço": 9.99,
+            "nome": "Caneta | Meu Malvado Favorito",
+            "tipo": "Caneta",
+            "preço": 50.00,
             "quantidade": 1,
-            "imagem": 0
+            "imagem":"imagens/catalogo/caneta_gru.png"
         }
         ,
         {
-            "nome": "Produto 5",
-            "tipo": "Tipo",
-            "preço": 9.99,
+            "nome": "Caneta | Bulbasauro",
+            "tipo": "Caneta",
+            "preço": 45.00,
             "quantidade": 1,
-            "imagem": 0
+            "imagem":"imagens/catalogo/caneta_bulbasauro.png"
         }
         ,
         {
-            "nome": "Produto 6",
-            "tipo": "Tipo",
-            "preço": 9.99,
+            "nome": "Figura | Pikachu",
+            "tipo": "Figura",
+            "preço": 150.00,
             "quantidade": 1,
-            "imagem": 0
+            "imagem":"imagens/catalogo/figura_pikachu.png"
         }
         ,
         {
-            "nome": "Produto 7",
-            "tipo": "Tipo",
-            "preço": 9.99,
+            "nome": "Figura | Pink",
+            "tipo": "Figura",
+            "preço": 60.00,
             "quantidade": 1,
-            "imagem": 0
+            "imagem":"imagens/catalogo/figura_pink.png"
         }
         ,
         {
-            "nome": "Produto 8",
-            "tipo": "Tipo",
-            "preço": 9.99,
+            "nome": "Figura | Cerebro",
+            "tipo": "Figura",
+            "preço": 60.00,
             "quantidade": 1,
-            "imagem": 0
+            "imagem":"imagens/catalogo/figura_cerebro.png"
         }
         ,
         {
-            "nome": "Produto 9",
-            "tipo": "Tipo",
-            "preço": 9.99,
+            "nome": "Funko Pop | Goro",
+            "tipo": "Funko Pop",
+            "preço": 150.00,
             "quantidade": 1,
-            "imagem": 0
+            "imagem":"imagens/catalogo/figura_goro.png"
         }
         ,
         {
-            "nome": "Produto 10",
-            "tipo": "Tipo",
-            "preço": 9.99,
+            "nome": "Figura | Simba",
+            "tipo": "Figura",
+            "preço": 160.00,
             "quantidade": 1,
-            "imagem": 0
+            "imagem":"imagens/catalogo/figura_simba.png"
         }
         ,
         {
-            "nome": "Produto 11",
-            "tipo": "Tipo",
-            "preço": 9.99,
+            "nome": "Figura | Pooh e Leitão",
+            "tipo": "Figura",
+            "preço": 120.00,
             "quantidade": 1,
-            "imagem": 0
+            "imagem":"imagens/catalogo/figura_pooh_leitao.png"
         }
         ,
         {
-            "nome": "Produto 12",
-            "tipo": "Tipo",
-            "preço": 9.99,
+            "nome": "Caneta | Angélica Pickles",
+            "tipo": "Caneta",
+            "preço": 60.00,
             "quantidade": 1,
-            "imagem": 0
+            "imagem":"imagens/catalogo/caneta_angelica_pickles.png"
         }
         ,
         {
-            "nome": "Produto 13",
-            "tipo": "Tipo",
-            "preço": 9.99,
+            "nome": "Figura | Luigi Fantasma",
+            "tipo": "Figura",
+            "preço": 80.00,
             "quantidade": 1,
-            "imagem": 0
+            "imagem":"imagens/catalogo/figura_luigi.png"
         }
         ,
         {
-            "nome": "Produto 14",
-            "tipo": "Tipo",
-            "preço": 9.99,
+            "nome": "Figura | Baby Yoda",
+            "tipo": "Figura",
+            "preço": 100.00,
             "quantidade": 1,
-            "imagem": 0
+            "imagem":"imagens/catalogo/figura_grogu.png"
         }
         ,
         {
-            "nome": "Produto 15",
-            "tipo": "Tipo",
-            "preço": 9.99,
+            "nome": "Figura | Pokemons",
+            "tipo": "Figura",
+            "preço": 90.00,
             "quantidade": 1,
-            "imagem": 0
+            "imagem":"imagens/catalogo/figura_pokemon.png"
         }
         ,
         {
-            "nome": "Produto 16",
-            "tipo": "Tipo",
-            "preço": 9.99,
+            "nome": "Funko Pop| Anne",
+            "tipo": "Funko Pop",
+            "preço": 130.00,
             "quantidade": 1,
-            "imagem": 0
+            "imagem":"imagens/catalogo/figura_anne.png"
         }
         ,
         {
-            "nome": "Produto 17",
-            "tipo": "Tipo",
-            "preço": 9.99,
+            "nome": "Figura | Penelope Von Schweetz",
+            "tipo": "Figura",
+            "preço": 90.00,
             "quantidade": 1,
-            "imagem": 0
+            "imagem":"imagens/catalogo/figura_penelope.png"
         }
         ,
         {
-            "nome": "Produto 18",
-            "tipo": "Tipo",
-            "preço": 9.99,
+            "nome": "Funko Pop | Jão",
+            "tipo": "Funko Pop",
+            "preço": 110.00,
             "quantidade": 1,
-            "imagem": 0
+            "imagem":"imagens/catalogo/funko_jao.png"
         }
         ,
         {
-            "nome": "Produto 19",
-            "tipo": "Tipo",
-            "preço": 9.99,
+            "nome": "Caneta | Subway Surfers",
+            "tipo": "Caneta",
+            "preço": 65.00,
             "quantidade": 1,
-            "imagem": 0
+            "imagem":"imagens/catalogo/caneta_subway_surfers.png"
         }
         ,
         {
-            "nome": "Produto 20",
-            "tipo": "Tipo",
-            "preço": 9.99,
+            "nome": "Caneta | Arca de Noé",
+            "tipo": "Caneta",
+            "preço": 70.00,
             "quantidade": 1,
-            "imagem": 0
+            "imagem":"imagens/catalogo/caneta_arca_de_noe.png"
         }
         ,
         {
-            "nome": "Produto 21",
-            "tipo": "Tipo",
-            "preço": 9.99,
+            "nome": "Figura | Pequeno Príncipe",
+            "tipo": "Figura",
+            "preço": 110.00,
             "quantidade": 1,
-            "imagem": 0
+            "imagem":"imagens/catalogo/figura_pequeno_principe.png"
         }
         ,
         {
-            "nome": "Produto 22",
-            "tipo": "Tipo",
-            "preço": 9.99,
+            "nome": "Figura | Choso",
+            "tipo": "Figura",
+            "preço": 90.00,
             "quantidade": 1,
-            "imagem": 0
-        }
-        ,
-        {
-            "nome": "Produto 23",
-            "tipo": "Tipo",
-            "preço": 9.99,
-            "quantidade": 1,
-            "imagem": 0
+            "imagem":"imagens/catalogo/figura_choso.png"
         }
     ]
 }
