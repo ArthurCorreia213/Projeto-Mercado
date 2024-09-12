@@ -8,8 +8,19 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/header.css">
     <script src="scripts.js"></script>
+    <style>
+        #produtos, #funkos, #figuras, #canetas{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 16px;
+        text-align: center;
+        margin-left: 22%;
+        width: 60%;
+        }
+    
+    </style>
 </head>
-<body>
+<body onload="telaInicialCartoes()">
     <header>
         <div class="header">
             <div class="titulo">
@@ -93,64 +104,91 @@
                         <div class="icon"><img src="imagens/produtos-icone.svg" alt="icone-produtos"></div>
                         <div class="icon-title"><h1>Produtos</h1></div>
                     </div>
+
+                    <div id="produtos"></div>
+                    <div class="aprt-produtos">
+                        <div class="icon-title"><h1>Funko Pop</h1></div>
+                    </div>
+                    <div id="funkos"></div>
+                    <div class="ver-mais">
+                        <a href="catalogo.html"><button type="button">Ver Mais
+                        </button></a>
+                    </div>
+                    <div class="aprt-produtos">
+                        <div class="icon-title"><h1>Canetas</h1></div>
+                    </div>
+                    <div id="canetas"></div>
+                    <div class="ver-mais">
+                        <a href="catalogo.html"><button type="button">Ver Mais
+                        </button></a>
+                    </div>
+                    <div class="aprt-produtos">
+                        <div class="icon-title"><h1>Figuras</h1></div>
+                    </div>
+                    <div id="figuras"></div>
+                    <div class="ver-mais">
+                        <a href="catalogo.html"><button type="button">Ver Mais
+                        </button></a>
+                    </div>
                     
-                    <div class="produtos">
-                        <div class="cart-item-info">
-                            <div class="card 1" id="c1">
-                                <div class="imag" style="background-image: url(imagens/catalogo/figura_anne.png);"></div>
+                    <!-- <div class="produtos2">
+                        <article>
+                            <div class="card 1">
+                                <div class="imag"></div>
                                 <div class="legenda">
                                     <div class="nomes">
                                         <div class="names">
-                                            <div class="title">Figura</div>
-                                            <div class="carac">Figura | Anne</div>
+                                            <div class="carac">Funko PoP</div>
+                                            <div class="title">Funko PoP - Jão</div>
                                         </div>
                                 </div>
                                     
                                         <div class="acoes">
-                                            <div class="valor">🛒R$ 100,00</div>
-                                            <button onclick="adicionarAoCarrinho('${nome}', ${preço}, '${tipo}', '${imagem}' )">Adicionar Ao Carrinho</button>
+                                            <div class="valor">🛒 R$ 100,00</div>
+                                            <button class="Adicionar" onclick="adicionarAoCarrinho()">Adicionar</button>
                                         </div>
                                 </div>
-                        </div>
-
-                        <div class="cart-item-info">
-                                <div class="card 1" id="c2">
-                                    <div class="imag" style="background-image: url(${imagem});"></div>
-                                    <div class="legenda">
-                                        <div class="nomes">
-                                            <div class="names">
-                                                <div class="title">${tipo}</div>
-                                                <div class="carac">${nome}</div>
-                                            </div>
-                                    </div>
-                                        
-                                            <div class="acoes">
-                                                <div class="valor">🛒R$${preço}</div>
-                                                <button onclick="adicionarAoCarrinho('${nome}', ${preço}, '${tipo}', '${imagem}' )">Adicionar Ao Carrinho</button>
-                                            </div>
-                                    </div>
+                            </div>
+                        </article>
+                
+                        <article>
+                            <div class="card 2">
+                                <div class="imag 2"
+                                id="dois"></div>
+                                <div class="legenda">
+                                    <div class="nomes">
+                                        <div class="names">
+                                            <div class="carac">Personagem - Pink e o Cerebro</div>
+                                            <div class="title">Cérebro</div>
+                                        </div>
+                                </div>
+                                    
+                                        <div class="acoes">
+                                            <div class="valor">🛒 R$ 80,00</div>
+                                            <button class="Adicionar" onclick="adicionarAoCarrinho()">Adicionar</button>
+                                        </div>
                                 </div>
                             </div>
-
-                            <div class="cart-item-info">
-                                <div class="card 1" id="c3">
-                                    <div class="imag" style="background-image: url(${imagem});"></div>
-                                    <div class="legenda">
-                                        <div class="nomes">
-                                            <div class="names">
-                                                <div class="title">${tipo}</div>
-                                                <div class="carac">${nome}</div>
-                                            </div>
-                                    </div>
-                                        
-                                            <div class="acoes">
-                                                <div class="valor">🛒R$${preço}</div>
-                                                <button onclick="adicionarAoCarrinho('${nome}', ${preço}, '${tipo}', '${imagem}' )">Adicionar Ao Carrinho</button>
-                                            </div>
-                                    </div>
+                        </article>
+                
+                        <article>
+                            <div class="card 3">
+                                <div class="imag 3" id="tres" style="background-image: url(https://i.pinimg.com/736x/4c/12/fd/4c12fda6812816ff3e64484b080914d2.jpg);"></div>
+                                <div class="legenda">
+                                    <div class="nomes">
+                                        <div class="names">
+                                            <div class="carac">Personagem</div>
+                                            <div class="title">Jujutsu</div>
+                                        </div>
+                                </div>
+                                    
+                                        <div class="acoes">
+                                            <div class="valor">🛒 R$ 100,00</div>
+                                            <button class="Adicionar" onclick="adicionarAoCarrinho()">Adicionar</button>
+                                        </div>
                                 </div>
                             </div>
-                        </div>
+                        </article> -->
                     </div>
             </div>
             

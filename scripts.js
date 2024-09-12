@@ -1,14 +1,15 @@
+fetch('./data.json')
+    .then(response => response.json())
+    .then(data => {
+        localStorage.setItem('catalogo', JSON.stringify(data.catalogo));
+    })
+    .catch(error => alert('Erro ao carregar o JSON:', error));
+
+
 function catalogoInicial(){
     document.getElementById('catalogo-teste').innerText = ''
-
-    fetch('./data.json')
-        .then(response => response.json())
-        .then(data => {
-        data.catalogo.forEach(produto =>{
-            criarCartao(produto.nome, produto.preço, produto.tipo, produto.imagem)
-        });
-        })
-        .catch(error => alert('Erro ao carregar o JSON:', error));
+    catalogo = JSON.parse(localStorage.getItem('catalogo'))
+    catalogo.forEach(item => criarCartao(item.nome, item.preço, item.tipo, item.imagem, 'catalogo-teste'))
 }
 
 function pesquisaCatalogo(){
@@ -19,21 +20,41 @@ function pesquisaCatalogo(){
 
     container.innerHTML = ''
 
-    fetch('./data.json')
-    .then(response => response.json())
-    .then(data => {
-    data.catalogo.forEach(produto =>{
-        let nomeLower = produto.nome.toLowerCase()
+    let catalogo = JSON.parse(localStorage.getItem('catalogo'))
+
+    catalogo.forEach(produto =>{
+        nomeLower = produto.nome.toLowerCase()
         if(nomeLower.includes(pesquisa_texto)){
-            criarCartao(produto.nome, produto.preço, produto.tipo, produto.imagem)
+            criarCartao(produto.nome, produto.preço, produto.tipo, produto.imagem, 'catalogo-teste')
         }
-    });
-    })
-    .catch(error => alert('Erro ao carregar o JSON:', error));
+    }
+    )
 }
 
-function criarCartao(nome, preço, tipo, imagem){
-    const container = document.getElementById('catalogo-teste');
+function telaInicialCartoes(){
+    const catalogo = JSON.parse(localStorage.getItem('catalogo'))
+    let funkos = 0; let canetas = 0; let figuras = 0
+
+    catalogo.forEach(produto =>{
+        switch(true){
+            case(produto.tipo == "Funko Pop" && funkos < 3):
+                funkos++
+                criarCartao(produto.nome, produto.preço, produto.tipo, produto.imagem, "funkos")
+                break;
+            case(produto.tipo == "Caneta" && canetas < 3):
+                canetas++
+                criarCartao(produto.nome, produto.preço, produto.tipo, produto.imagem, 'canetas')
+                break;
+            case(produto.tipo == "Figura" && figuras < 3):
+                figuras++
+                criarCartao(produto.nome, produto.preço, produto.tipo, produto.imagem, 'figuras')
+                break;
+        }
+    })
+}
+
+function criarCartao(nome, preço, tipo, imagem, container){
+    const divAlvo = document.getElementById(container)
     // Percorre os itens do carrinho e cria os elementos da grid
         const itemElement = document.createElement('div');
         itemElement.className = 'cart-item';
@@ -61,7 +82,7 @@ function criarCartao(nome, preço, tipo, imagem){
         `;
   
         // Adiciona o item à grid do carrinho
-        container.appendChild(itemElement);
+        divAlvo.appendChild(itemElement);
     }
 
 // Adiciona o produto ao carrinho
@@ -118,9 +139,9 @@ function atualizarCarrinho() {
         <div id="imagen"><img src="${item.imagem}"></div>
         <div id="tipo_produto">${item.tipo} <h2 id="produto_nome">${item.nome}</h2></div>
         <div id="valor_comprar">
-            R$${item.preco}<br><br>
+            R$${item.preco * item.quantidade}<br><br>
             Quantidade: ${item.quantidade}<br><br><br>
-            <button onclick="removerDoCarrinho('${item.nome}')">Remover</button>
+            <button id="remover-b" onclick="removerDoCarrinho('${item.nome}')">Remover</button>
         </div>
         `;
 

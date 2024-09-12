@@ -73,9 +73,29 @@
 
             padding-top: 10px;
             font-family: "Roboto", sans-serif;
-            font-weight: 400;
+            font-weight: 500;
             font-style: normal;
             font-size: 15pt;
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+    
+        }
+
+        #filtros input{
+            background-color: rgb(255, 246, 214);
+            border: 1px solid #00000027;
+            height: 25px;
+
+        }
+
+        #filtros button{
+            background-color: #fa6732;
+            border: none;
+            height: 30px;
+            color: #fff;
+            border: none;
+            border-radius: 2px;
         }
         /* main{display: flex;} */
 
@@ -178,9 +198,9 @@
         <div id="filtros">
             <input type="text" placeholder="Digite para procurar um produto" id="texto_pesquisa"><br>
             <button id="botao_pesquisar" onclick="pesquisaCatalogo()">Pesquisar</button><br>
-            <button id="resetar_filtros" onclick="catalogoInicial()">Reiniciar filtros</button><br><br>
+            <button id="resetar_filtros" onclick="catalogoInicial()">Limpar pesquisa</button><br><br>
 
-            <input type="checkbox" id="filtro_funko_pop">
+            <!-- <input type="checkbox" id="filtro_funko_pop">
             <label for="subscribeNews"> Funko Pop </label><br>
 
 
@@ -189,7 +209,7 @@
 
 
             <input type="checkbox" id="filtro_caneta">
-            <label for="subscribeNews"> Caneta </label>
+            <label for="subscribeNews"> Caneta </label> -->
         </div>
 
         <div id="catalogo-teste"></div>
