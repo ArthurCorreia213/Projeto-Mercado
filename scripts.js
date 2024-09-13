@@ -12,23 +12,55 @@ function catalogoInicial(){
     catalogo.forEach(item => criarCartao(item.nome, item.preço, item.tipo, item.imagem, 'catalogo-teste'))
 }
 
+function filtroOpcoes(){
+    const filtro_funko = document.getElementById('filtro_funko_pop').checked
+    const filtro_figura = document.getElementById('filtro_figura').checked
+    const filtro_canetas = document.getElementById('filtro_caneta').checked
+
+    const filtro_teste = [filtro_funko, filtro_figura, filtro_canetas]
+
+    let filtros = []
+
+    for(let i = 0; i<=2; i++){
+        if(filtro_teste[i] === true){
+            if(i === 0){filtros.push("Funko Pop")}
+            else if(i === 1){filtros.push("Figura")}
+            else if(i === 2){filtros.push("Caneta")}
+        }
+    }
+    if(filtros.lenght != 0){
+        return filtros
+    }
+    else{return 0}
+}
+
 function pesquisaCatalogo(){
     const pesquisa_texto = document.getElementById("texto_pesquisa").value.toLowerCase()
     const container = document.getElementById('catalogo-teste');
-
-    // document.getElementById("p").innerHTML = document.getElementById("myCheck").checked == true;
-
-    container.innerHTML = ''
-
     let catalogo = JSON.parse(localStorage.getItem('catalogo'))
+    filtros = filtroOpcoes()
+    ordenar = document.getElementById('opcoes-ordenar').value
+    alert(ordenar)
 
-    catalogo.forEach(produto =>{
-        nomeLower = produto.nome.toLowerCase()
-        if(nomeLower.includes(pesquisa_texto)){
-            criarCartao(produto.nome, produto.preço, produto.tipo, produto.imagem, 'catalogo-teste')
-        }
+    if (filtros != 0){
+        container.innerHTML = ''
+        catalogo.forEach(produto =>{
+            nomeLower = produto.nome.toLowerCase()
+            if(nomeLower.includes(pesquisa_texto) && filtros.includes(produto.tipo)){
+                criarCartao(produto.nome, produto.preço, produto.tipo, produto.imagem, 'catalogo-teste')
+            }
+        })
     }
-    )
+    else{
+        container.innerHTML = ''
+        catalogo.forEach(produto =>{
+            nomeLower = produto.nome.toLowerCase()
+            if(nomeLower.includes(pesquisa_texto)){
+                criarCartao(produto.nome, produto.preço, produto.tipo, produto.imagem, 'catalogo-teste')
+            }
+        })
+    }
+    
 }
 
 function telaInicialCartoes(){
@@ -156,23 +188,3 @@ function atualizarCarrinho() {
 }
 
 document.addEventListener('DOMContentLoaded', atualizarCarrinho);
-
-
-
-// Código do carrossel
-const box = document.querySelector('.container')
-const imagens = document.querySelectorAll('.container img')
-
-let contador = 0;
-
-function slider(){
-    contador++
-
-    if(contador > imagens.length - 1){
-        contador = 0
-    }
-
-    box.computedStyleMap.transform = `translateX(${-contador * 1600}px)`
-}
-
-setInterval(slider, 2000)

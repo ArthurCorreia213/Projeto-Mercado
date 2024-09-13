@@ -9,9 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nanum+Gothic:wght@400;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
     <style>
-        /* *{border: 1px solid red;} */
-        body{text-align: center;
-        transition: 0.1s ease-in;}
+        *{border: 1px solid red;}
+
+        body{
+            text-align: center;
+            transition: 0.1s ease-in;
+        }
+        
         #catalogo-teste {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -66,7 +70,7 @@
 
         #filtros{
             width: 20%;
-            position: fixed;
+            /* position: fixed; */
             float: inline-start;
 
             /* opcional: */
@@ -82,7 +86,7 @@
     
         }
 
-        #filtros input{
+        #filtros input[type=text]{
             background-color: rgb(255, 246, 214);
             border: 1px solid #00000027;
             height: 25px;
@@ -170,12 +174,23 @@
 
 #filtros{
     text-align: left;
-    padding-left: 5%;
+    padding: 2.5%;
+    margin-top: 3%;
     font-size: 18px;
+    padding-top: 5%;
+    width: fit-content;
+    height: fit-content;
+    margin-left: 2.5%;
+    background-color: #FFC700;
+    border: 3px solid rgb(161, 0, 0);
 }
 
 #botao_pesquisar, #texto_pesquisa, #resetar_filtros{
     width: 200px;
+}
+
+input[type=checkbox], label{
+    display: inline;
 }
         </style>
         <link rel="stylesheet" href="css/header.css">
@@ -195,21 +210,30 @@
     </div>
 
     <main>
-        <div id="filtros">
-            <input type="text" placeholder="Digite para procurar um produto" id="texto_pesquisa"><br>
-            <button id="botao_pesquisar" onclick="pesquisaCatalogo()">Pesquisar</button><br>
-            <button id="resetar_filtros" onclick="catalogoInicial()">Limpar pesquisa</button><br><br>
+        <div id="filtros-container">
+            <div id="filtros">
+                <input type="text" placeholder="Digite para procurar um produto" id="texto_pesquisa"><br>
+                <button id="botao_pesquisar" onclick="pesquisaCatalogo()">Pesquisar</button><br>
+                <button id="resetar_filtros" onclick="catalogoInicial()">Limpar pesquisa</button><br><br>
 
-            <!-- <input type="checkbox" id="filtro_funko_pop">
-            <label for="subscribeNews"> Funko Pop </label><br>
+                <label for="filtro_funko_pop"><input type="checkbox" id="filtro_funko_pop"> Funko Pop </label> <!--Não faço ideia do porque mas só consegui fazer a checkbox e a label ficarem na mesma linha dessa maneira-->
 
+                <label for="filtro_figura"><input type="checkbox" id="filtro_figura"> Figura </label>
 
-            <input type="checkbox" id="filtro_figura">
-            <label for="subscribeNews"> Figura </label><br>
+                <label for="filtro_caneta"><input type="checkbox" id="filtro_caneta"> Caneta </label>
 
+                <br><br>
 
-            <input type="checkbox" id="filtro_caneta">
-            <label for="subscribeNews"> Caneta </label> -->
+                <label for="ordenar">Ordenar</label>
+
+                <select name="ordenar" id="opcoes-ordenar">
+                  <option value="preço-crescente" selected disabled>Selecione uma opção</option>
+                  <option value="alfabetica-az">Orderm alfabética (A-Z)</option>
+                  <option value="alfabetica-za">Orderm alfabética (Z-A)</option>
+                  <option value="preço-crescente">Preço (preço-crescente)</option>
+                  <option value="preço-decrescente">Preço (preço-decrescente)</option>
+                </select> 
+            </div>
         </div>
 
         <div id="catalogo-teste"></div>
