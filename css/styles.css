@@ -1,8 +1,10 @@
+*{box-sizing: border-box;}
+
 body{
     margin: 0;
 }
 
-.container-carrossel{
+.container_carrossel{
     display: flex;
     width: 100%;
     min-height: 100vh;
@@ -373,6 +375,41 @@ font-size: 15pt;
     background-color: rgb(29, 29, 29) ;
     transform: scale(1.01);
 }
+
+/* patrocinios */
+
+.patrocinios-container{
+    display: flex;
+ flex-wrap: wrap;
+    esse flex wrap é maneiro */
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 90px;
+    border-radius: 50px;
+}
+
+/* tenha em mente estas posições em relação a erquerda::: */
+
+.patrocinios-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 15pt;
+    font-style: normal;
+    padding-left: 9.5%;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18pt;    
+    transition: 0.1s ease-in-out;
+
+}
+
+.patrocinios img:hover{
+    transition: 0.1s ease-in-out;
+    box-shadow: 0 0 10px #fecf235d;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 
 footer{
     display: flex;

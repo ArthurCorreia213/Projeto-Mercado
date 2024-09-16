@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja de Exemplos</title>
+    <title>Barbara Laís - Artesã</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/modal.css">
     <script src="scripts.js"></script>
     <script src="carrossel.js" defer></script>
     <style>
@@ -18,10 +19,32 @@
         margin-left: 22%;
         width: 60%;
         }
+
+        #itens_carrinho{
+            padding-left: 2%;
+        }
     
     </style>
 </head>
 <body onload="telaInicialCartoes()">
+
+    <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Produto adicionado ao carrinho</h2>
+    </div>
+    <div id="modal-body">
+    </div>
+    <div class="modal-footer"><br>
+      <a href="carrinho.html">Ir ao carrinho</a>
+    </div>
+  </div>
+</div>
+
     <header>
         <div class="header">
             <div class="titulo">
@@ -31,6 +54,7 @@
 
             <div class="links">
                 <div class="carrinho"><a href="carrinho.html"><img height="30px" src="imagens/carrinho.svg" alt=""></a></div>
+                <div id="itens_carrinho"></div>
                 <div class="home"><a href="index.html">Home</a></div>
                 <div class="loja"><a href="catalogo.html">Loja</a> </div>
             </div>
@@ -38,9 +62,9 @@
         </div>
     </header>
 
-    <div class="container-carrossel">
+    <div class="container_carrossel">
         <button id="prev-button"><img src="imagens/seta modelo 1.svg" alt=""></button>
-        <div class="carrossel">
+        <div class="carrossel" id="img">
             <img src="imagens/carrossel/doutor estranho certo 1.svg" alt="" class="slider on">
             <img src="imagens/carrossel/gru lua certo 1.svg" alt="" class="slider">
             <img src="imagens/carrossel/Urso poo certo 1.svg" alt="" class="slider">
@@ -133,67 +157,48 @@
                         <a href="catalogo.html"><button type="button">Ver Mais
                         </button></a>
                     </div>
-                    
-                    <!-- <div class="produtos2">
-                        <article>
-                            <div class="card 1">
-                                <div class="imag"></div>
-                                <div class="legenda">
-                                    <div class="nomes">
-                                        <div class="names">
-                                            <div class="carac">Funko PoP</div>
-                                            <div class="title">Funko PoP - Jão</div>
-                                        </div>
-                                </div>
-                                    
-                                        <div class="acoes">
-                                            <div class="valor">🛒 R$ 100,00</div>
-                                            <button class="Adicionar" onclick="adicionarAoCarrinho()">Adicionar</button>
-                                        </div>
-                                </div>
-                            </div>
-                        </article>
-                
-                        <article>
-                            <div class="card 2">
-                                <div class="imag 2"
-                                id="dois"></div>
-                                <div class="legenda">
-                                    <div class="nomes">
-                                        <div class="names">
-                                            <div class="carac">Personagem - Pink e o Cerebro</div>
-                                            <div class="title">Cérebro</div>
-                                        </div>
-                                </div>
-                                    
-                                        <div class="acoes">
-                                            <div class="valor">🛒 R$ 80,00</div>
-                                            <button class="Adicionar" onclick="adicionarAoCarrinho()">Adicionar</button>
-                                        </div>
-                                </div>
-                            </div>
-                        </article>
-                
-                        <article>
-                            <div class="card 3">
-                                <div class="imag 3" id="tres" style="background-image: url(https://i.pinimg.com/736x/4c/12/fd/4c12fda6812816ff3e64484b080914d2.jpg);"></div>
-                                <div class="legenda">
-                                    <div class="nomes">
-                                        <div class="names">
-                                            <div class="carac">Personagem</div>
-                                            <div class="title">Jujutsu</div>
-                                        </div>
-                                </div>
-                                    
-                                        <div class="acoes">
-                                            <div class="valor">🛒 R$ 100,00</div>
-                                            <button class="Adicionar" onclick="adicionarAoCarrinho()">Adicionar</button>
-                                        </div>
-                                </div>
-                            </div>
-                        </article> -->
-                    </div>
             </div>
+
+            <hr>
+
+            <div class="patrocinios">
+                <div class="patrocinios-title"><h1>Patrocíníos</h1></div>
+
+                <div class="patrocinios-container">
+                    
+                    <div class="inkway">
+                        
+                        <img src="imagens/patrocinios/inkway.svg" alt="inkway" style="border-radius: 100%;    height: 100%;
+    max-height: 200px;">
+
+                    </div>
+
+                    <div class="tekbond">
+                        <img src="imagens/patrocinios/tekbond.svg" alt="tekbond" style="border-radius: 100%;     height: 100%;
+    max-height: 200px;">
+                    </div>
+
+                    <div class="saramanil">
+                        <img src="imagens/patrocinios/seramanil.svg" alt="saramanil" style="border-radius: 100%;     height: 100%;
+    max-height: 200px;">
+                    </div>
+
+                    <div class="imballa">
+                        <img src="imagens/patrocinios/imballa.svg" alt="imballa" style="border-radius: 100%;    height: 100%;
+    max-height: 200px;">
+                    </div>
+
+                    <div class="biscuit-loja">
+                        <img src="imagens/patrocinios/biscuit-loja.svg" alt="biscuit-loja" style="border-radius: 100%;    height: 100%;
+    max-height: 200px;">
+                    </div>
+
+                </div>
+                
+
+            </div>
+
+        <hr>
             
         </div>
 
@@ -206,19 +211,19 @@
                     </div>
                     <div class="redes">
                         <div class="rede insta">
-                            <div class="icon-in"></div>
+                            <div class="icon-in"><img src="imagens/inst-icon.svg" alt="insta" style="height: 55px;"></div>
                             <div>
                                 <p>@barbaralais_oficial</p>
                             </div>
                         </div>
                         <div class="rede pinter">
-                            <div class="icon-pi"></div>
+                            <div class="icon-pi"><img src="imagens/pin-icon.svg" alt="insta" style="height: 50px;"></div>
                             <div>
                                 <p>barbaralaisartesa</p>
                             </div>
                         </div>
                         <div class="rede whats">
-                            <div class="icon-wa"></div>
+                            <div class="icon-wa"><img src="imagens/whats-icon.svg" alt="insta" style="height: 50px;"></div>
                             <div>
                                 <p>(11) 97858-8187</p>
                             </div>

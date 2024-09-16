@@ -1,17 +1,34 @@
+// const imgs = document.getElementById("img")
+// const img = document.querySelectorAll("#img img")
+
+// let idx = 0
+
+// function carrossel(){
+//     idx++
+
+//     if (idx > img.length - 1){
+//         idx = 0
+//     }
+
+//     imgs.style.opacity = 1
+// }
+
+// setInterval(container_carrossel, 2000);
+
 // Carrossel de imagens
 
-const slider = document.querySelectorAll('slider')
+const slider = document.querySelectorAll('.slider')
 const btnPrev = document.getElementById('prev-button')
 const btnNext = document.getElementById('next-button')
 
 let currentSlide = 0
 
-function hideSlider() {
+function hideSlider(){
     slider.forEach(item => item.classList.remove('on'))
 }
 
 function showSlider(){
-    slider[currentSlide].item.classList.add('on')
+    slider[currentSlide].classList.add('on')
 }
 
 function nextSlider(){
@@ -23,7 +40,7 @@ function nextSlider(){
     else{
         currentSlide++
     }
-    showSlider
+    showSlider()
 }
 
 function prevSlider(){
@@ -39,6 +56,6 @@ function prevSlider(){
 }
 
 btnNext.addEventListener('click', nextSlider)
-btnNext.addEventListener('click', prevSlider)
+btnPrev.addEventListener('click', prevSlider)
 
 console.log(slider)

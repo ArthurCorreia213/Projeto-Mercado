@@ -28,7 +28,7 @@ function filtroOpcoes(){
             else if(i === 2){filtros.push("Caneta")}
         }
     }
-    if(filtros.lenght != 0){
+    if(filtros.length != 0){
         return filtros
     }
     else{return 0}
@@ -40,7 +40,21 @@ function pesquisaCatalogo(){
     let catalogo = JSON.parse(localStorage.getItem('catalogo'))
     filtros = filtroOpcoes()
     ordenar = document.getElementById('opcoes-ordenar').value
-    alert(ordenar)
+
+    switch(true){
+        case(ordenar === "alfabetica-az"):
+            catalogo.sort((a, b) => a.nome.localeCompare(b.nome))
+            break;
+        case(ordenar === "alfabetica-za"):
+            catalogo.sort((a, b) => b.nome.localeCompare(a.nome))
+            break;
+        case(ordenar === "preço-crescente"):
+            catalogo.sort((a, b) => a.preço - b.preço)
+            break;
+        case(ordenar === "preço-decrescente"):
+            catalogo.sort((a, b) => b.preço - a.preço)
+            break;
+    }
 
     if (filtros != 0){
         container.innerHTML = ''
@@ -60,7 +74,9 @@ function pesquisaCatalogo(){
             }
         })
     }
-    
+    if(container.innerHTML === ''){
+        container.innerHTML = `<h1 id="nada_encontrado">Nenhum produto com o nome "${pesquisa_texto}" encontrado</h1>`
+    }
 }
 
 function telaInicialCartoes(){
@@ -131,8 +147,10 @@ function adicionarAoCarrinho(nome, preco, tipo, imagem) {
     }
     
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
-    alert(nome + ' foi adicionado ao carrinho!');
+    // alert(nome + ' foi adicionado ao carrinho!');
 
+    modal(nome)
+    numeroDeItensCarrinho()
     atualizarCarrinho();
 }
 
@@ -187,4 +205,45 @@ function atualizarCarrinho() {
     totalContainer.innerText = `Total: R$${total.toFixed(2)}`;
 }
 
+function modal(item){
+        // Get the modal
+        var modal = document.getElementById("myModal");
+    
+        // Get the button that opens the modal
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        modal.style.display = "block";
+
+        document.getElementById("modal-body").innerHTML = `O produto "${item}" foi adicionado ao seu carrinho!`
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+            modal.style.display = "none";
+            }
+        }
+}
+
+function numeroDeItensCarrinho(){
+    const carrinho = JSON.parse(localStorage.getItem('carrinho'))
+    document.getElementById("itens_carrinho").innerHTML = carrinho.length
+}
+
+document.addEventListener('DOMContentLoaded', numeroDeItensCarrinho);
+
 document.addEventListener('DOMContentLoaded', atualizarCarrinho);
+
+
+document.addEventListener("keypress", function onEvent(event) {
+    if (event.key === "Enter") {
+        pesquisaCatalogo()
+    }
+});

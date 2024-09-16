@@ -38,7 +38,15 @@ a{
     align-items: center;
     flex-direction: row;
     gap: 40px;
-    
+}
 
-    
+#itens_carrinho{
+    background-color: #0a996f;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 17px;
+    margin-left: -20%;
+    margin-top: -8%;
 }
