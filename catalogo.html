@@ -197,7 +197,7 @@ input[type=checkbox], label{
 }
 
 main{
-    min-height: 605px;
+    min-height: 606px;
 }
 
 #nada_encontrado{
@@ -224,7 +224,7 @@ main{
     </div>
     <div id="modal-body">
     </div>
-    <div class="modal-footer"><br>
+    <div class="modal-footer">
       <a href="carrinho.html">Ir ao carrinho</a>
     </div>
   </div>
@@ -237,10 +237,10 @@ main{
         </div>
 
         <div class="links">
-            <div class="carrinho"><a href="carrinho.html"><img height="30px" src="imagens/carrinho.svg" alt=""></a></div>
+            <div class="carrinho"><a href="carrinho.html" id="header_a"><img height="30px" src="imagens/carrinho.svg" alt=""></a></div>
             <div id="itens_carrinho"></div>
-            <div class="home"><a href="index.html">Home</a></div>
-            <div class="loja"><a href="catalogo.html">Loja</a> </div>
+            <div class="home"><a href="index.html" id="header_a">Home</a></div>
+            <div class="loja"><a href="catalogo.html" id="header_a">Loja</a> </div>
         </div>
     </div>
 
@@ -263,11 +263,11 @@ main{
                 <label for="ordenar">Ordenar</label>
 
                 <select name="ordenar" id="opcoes-ordenar">
-                  <option value="preço-crescente" selected disabled>Selecione uma opção</option>
+                  <option selected disabled hidden>Selecione uma opção</option>
+                  <option value="preço-crescente">Preço (Crescente)</option>
+                  <option value="preço-decrescente">Preço (Decrescente)</option>
                   <option value="alfabetica-az">Orderm alfabética (A-Z)</option>
                   <option value="alfabetica-za">Orderm alfabética (Z-A)</option>
-                  <option value="preço-crescente">Preço (preço-crescente)</option>
-                  <option value="preço-decrescente">Preço (preço-decrescente)</option>
                 </select> 
             </div>
         </div>

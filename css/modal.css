@@ -20,9 +20,10 @@
   /* Modal Content */
   .modal-content {
     position: fixed;
+    left: 25%;
     bottom: 0;
     background-color: #fefefe;
-    width: 100%;
+    width: 50%;
     -webkit-animation-name: slideIn;
     -webkit-animation-duration: 0.4s;
     animation-name: slideIn;
@@ -50,14 +51,14 @@
     color: white;
   }
   
-  .modal-body {padding: 2px 16px;}
+  #modal-body {padding: 10px 16px;}
   
   .modal-footer {
-    padding: 2px 16px;
+    padding: 14px;
     background-color: #5cb85c;
     color: white;
   }
-  
+
   /* Add Animation */
   @-webkit-keyframes slideIn {
     from {bottom: -300px; opacity: 0} 

@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="css/t1.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/modal_comprar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nanum+Gothic:wght@400;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
     <style>
-        /* *{border: 1px solid red;} */
-    /* body{text-align: center;} */
+    /* a{
+        color: blue;
+    } */
     #carrinhoteste {
         text-align: center;
     }
@@ -122,6 +124,25 @@
         min-height: 388px;
     }
 
+    .pagamento_form{
+        text-align: start;
+    }
+
+    #cartao_expiracao_mes, #cartao_expiracao_ano, #endereco_num, #cartao_seguranca{
+        width: 40px;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    #modal-body img{
+        width: 50%;
+        height: 50%;
+    }
+
     </style>
 </head>
 <body>
@@ -133,8 +154,8 @@
 
         <div class="links">
             <div class="carrinho"><a href="imagens/carrinho.svg"><img height="30px" src="a.svg" alt=""></a></div>
-            <div class="home"><a href="index.html">Home</a></div>
-            <div class="loja"><a href="catalogo.html">Loja</a> </div>
+            <div class="home"><a href="index.html" id="header_a">Home</a></div>
+            <div class="loja"><a href="catalogo.html" id="header_a">Loja</a> </div>
         </div>
 
     </div>
@@ -146,9 +167,33 @@
         <div id="carrinhoteste"></div>
         <div id="total_comprar">
             <div id="total" class="cart-total">Total: R$0,00</div>
-            <button id="comprar">Comprar</button>
+            <button id="comprar" onclick="comprar()">Comprar</button>
         </div>
     </main>
+    <!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Finalizar compra</h2>
+      </div>
+      <div id="modal-body">
+        Selecione um método de pagamento:
+        <select name="metodos-pagamento" id="metodos-pagamento">
+            <option value="preço-crescente" selected disabled hidden>Selecione uma opção</option>
+            <option value="cartao">MasterCard</option>
+            <option value="cartao">Visa</option>
+            <!-- <option value="pix">Pix</option> -->
+          </select>
+        </div>
+        <div id="pagamento_form"></div>
+      <div class="modal-footer">
+        <!-- <a href="carrinho.html">Ir ao carrinho</a> -->
+      </div>
+    </div>
+  </div>
 
     <div class="footer">
         <div class="footer-container">

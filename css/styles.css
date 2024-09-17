@@ -4,24 +4,59 @@ body{
     margin: 0;
 }
 
-.container_carrossel{
-    display: flex;
-    width: 100%;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-.carrossel{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 1600px;
-}
-
 .slider{
+    margin: 0 auto;
+    width: 1901px;
+    height: 800px;
+    overflow: hidden;
+}
+
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 0.7s;
+}
+
+.slide img{
+    width: 1901px;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 1901px;
+    margin-top: 720px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-bnt{
+    border: 2px solid blue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.manual-bnt:not(:last-child){
+    margin-right: 50px;
+}
+
+.manual-bnt:hover{
+    background-color: #fff;
+}
+
+/* .slider{
     opacity: 0;
     transition: opacity .2s;
 
@@ -49,7 +84,7 @@ body{
 
 #prev-button img{
     rotate: 180deg;
-}
+} */
 
 .card{
     /* Auto layout */
@@ -380,8 +415,8 @@ font-size: 15pt;
 
 .patrocinios-container{
     display: flex;
- flex-wrap: wrap;
-    esse flex wrap é maneiro */
+    flex-wrap: wrap;
+    /* esse flex wrap é maneiro */ 
     justify-content: center;
     align-items: center;
     justify-content: space-evenly;
@@ -410,7 +445,110 @@ font-size: 15pt;
     cursor: pointer;
 }
 
+/* configutrando banner: */
 
+.entrega-banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#banner-entrega{
+    width: 100%;
+    height: 100%;
+    max-height: 450px;
+    padding: 10px 0 100px;
+}
+
+/* configurando "um pouco sobre mim:" */
+
+.sobre-mim {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Define duas colunas de diferentes larguras */
+    grid-template-rows: auto auto; /* Define duas linhas de altura automática */
+    grid-template-areas: 
+        "p2-mim sobre-mim-teste sobre-mim-teste"
+        "p2-mim p2-mim-2 p2-mim-3";
+    grid-gap: 10px;
+    padding: 0 9.5%;
+}
+
+
+@media (max-width: 678px) {
+
+    .sobre-mim {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Define duas colunas de diferentes larguras */
+        grid-template-rows: auto auto; /* Define duas linhas de altura automática */
+        grid-template-areas: 
+            "p2-mim"
+            "sobre-mim-teste"
+            "p2-mim-2"
+            "p2-mim-3";
+        grid-gap: 10px;
+        padding: 0 9.5%;
+    }
+
+    .patrocinios-container{
+        flex-direction: column;
+        
+    }
+    .inkway, .tekbond, .saramanil, .imballa, .biscuit-loja{
+        height: 150px;
+        align-items: column;
+    }
+}
+
+.sobre-mim-teste {
+    grid-area: sobre-mim-teste;
+    margin: 0;
+    padding: 0;
+}
+
+.sobre-mim-teste h1{
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5em;  
+}
+
+.sobre-mim-teste p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.p2-mim {
+    grid-area: p2-mim;
+    margin: 0;
+    padding: 0;
+}
+
+.p2-mim-2 {
+    grid-area: p2-mim-2;
+    margin: 0;
+    padding: 0;
+}
+
+.p2-mim-3{
+    grid-area: p2-mim-3;
+    margin: 0;
+    padding: 0;
+}
+#img-mim {
+    display: block; /* Remove o espaço abaixo das imagens */
+    max-width: 100%; /* Ajusta a largura máxima da imagem para se ajustar ao seu contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+/* 
+adicionando um espaçamento no final: */
+
+.produtos, .sobre-mim, .patrocinios{
+    padding-bottom: 20px;
+}
 footer{
     display: flex;
     justify-content: center;

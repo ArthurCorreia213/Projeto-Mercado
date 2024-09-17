@@ -205,6 +205,84 @@ function atualizarCarrinho() {
     totalContainer.innerText = `Total: R$${total.toFixed(2)}`;
 }
 
+function comprar() {
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    modal.style.display = "block";
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+        modal.style.display = "none";
+        }
+    }
+
+}
+
+function finalizarCompra(){
+    document.getElementById("modal-body").innerHTML = '<img src="imagens/green-check-mark-icon-on-transparent-background-free-png-2417119346.png">'
+    document.getElementById("pagamento_form").innerHTML = 'Compra finalizada!<br>Obrigado por comprar<br><br><a href="index.html">Voltar ao início</a>'
+
+    localStorage.removeItem("carrinho")
+    atualizarCarrinho()
+}
+
+document.getElementById('metodos-pagamento').addEventListener('change', function() {
+    let metodo = document.getElementById('metodos-pagamento').value
+    
+    if(metodo === 'cartao'){
+        document.getElementById('pagamento_form').innerHTML = `
+        <form>
+        <label for="nome">Nome Completo: </label>
+        <input type="text" id="nome"><br>
+
+        <label for="cpf">CPF: </label>
+        <input type="number" id="cpf"><br><br>
+
+        <label for="nome">Número do cartão: </label>
+        <input type="number" id="cartao_num"><br>
+
+        <label for="nome">Código de segurança: </label>
+        <input type="number" id="cartao_seguranca"><br>
+
+        <label for="nome">Data de expiração: </label><br>
+        <input type="number" id="cartao_expiracao_mes" max="99"> /
+        <input type="number" id="cartao_expiracao_ano" max="99"><br><br>
+
+        <label for="nome">CEP: </label>
+        <input type="number" id="nome"><br>
+
+        <label for="nome">Logradouro: </label>
+        <input type="text" id="endereco">
+
+        <label for="nome">nº: </label>
+        <input type="number" id="endereco_num"><br>
+
+        <label for="nome">Cidade: </label>
+        <input type="text" id="nome"><br>
+
+        <label for="nome">País: </label>
+        <input type="text" id="nome"><br>
+        </form>
+        <br>
+        <button onclick="finalizarCompra()">Finalizar</button>
+        `;
+    }
+}
+)
+
 function modal(item){
         // Get the modal
         var modal = document.getElementById("myModal");

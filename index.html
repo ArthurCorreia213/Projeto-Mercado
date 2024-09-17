@@ -23,6 +23,10 @@
         #itens_carrinho{
             padding-left: 2%;
         }
+
+        hr{
+            width: 80%;
+        }
     
     </style>
 </head>
@@ -48,29 +52,56 @@
     <header>
         <div class="header">
             <div class="titulo">
-                <div class="img"><a href="inicio.html"><img style="height: 40px;" src="imagens/icone1.svg" alt="icone"></a></div>
+                <div class="img"><a href="index.html"><img style="height: 40px;" src="imagens/icone1.svg" alt="icone"></a></div>
                 <div class="nome">Barbara Laís - Artesã</div>
             </div>
 
             <div class="links">
-                <div class="carrinho"><a href="carrinho.html"><img height="30px" src="imagens/carrinho.svg" alt=""></a></div>
+                <div class="carrinho"><a href="carrinho.html" id="header_a"><img height="30px" src="imagens/carrinho.svg" alt=""></a></div>
                 <div id="itens_carrinho"></div>
-                <div class="home"><a href="index.html">Home</a></div>
-                <div class="loja"><a href="catalogo.html">Loja</a> </div>
+                <div class="home"><a href="index.html" id="header_a">Home</a></div>
+                <div class="loja"><a href="catalogo.html" id="header_a">Loja</a> </div>
             </div>
 
         </div>
     </header>
 
-    <div class="container_carrossel">
-        <button id="prev-button"><img src="imagens/seta modelo 1.svg" alt=""></button>
-        <div class="carrossel" id="img">
-            <img src="imagens/carrossel/doutor estranho certo 1.svg" alt="" class="slider on">
-            <img src="imagens/carrossel/gru lua certo 1.svg" alt="" class="slider">
-            <img src="imagens/carrossel/Urso poo certo 1.svg" alt="" class="slider">
+    <div class="slider">
+        <div class="slides">
+
+            <!-- Radio buttons -->
+            <input type="radio" id="radio1" name="radio">
+            <input type="radio" id="radio2" name="radio">
+            <input type="radio" id="radio3" name="radio">
+
+            <!-- Slides img -->
+            <div class="slide first">
+                <img src="imagens/carrossel/doutor estranho certo 1.svg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="imagens/carrossel/gru lua certo 1.svg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="imagens/carrossel/Urso poo certo 1.svg" alt="">
+            </div>
             <!-- <img src="" alt=""> -->
+
+            <!-- Navegação automatica -->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+
+            <!-- navegação clicavel -->
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
         </div>
-        <button id="next-button"><img src="imagens/seta modelo 1.svg" alt=""></button>
     </div>
 
     <div class="sombra">
@@ -131,7 +162,7 @@
                         <div class="icon"><img src="imagens/produtos-icone.svg" alt="icone-produtos"></div>
                         <div class="icon-title"><h1>Produtos</h1></div>
                     </div>
-
+                    <hr>
                     <div id="produtos"></div>
                     <div class="aprt-produtos">
                         <div class="icon-title"><h1>Funko Pop</h1></div>
@@ -140,7 +171,7 @@
                     <div class="ver-mais">
                         <a href="catalogo.html"><button type="button">Ver Mais
                         </button></a>
-                    </div>
+                    </div><hr>
                     <div class="aprt-produtos">
                         <div class="icon-title"><h1>Canetas</h1></div>
                     </div>
@@ -148,7 +179,7 @@
                     <div class="ver-mais">
                         <a href="catalogo.html"><button type="button">Ver Mais
                         </button></a>
-                    </div>
+                    </div><hr>
                     <div class="aprt-produtos">
                         <div class="icon-title"><h1>Figuras</h1></div>
                     </div>
@@ -156,7 +187,34 @@
                     <div class="ver-mais">
                         <a href="catalogo.html"><button type="button">Ver Mais
                         </button></a>
-                    </div>
+                    </div><hr>
+            </div>
+
+            <div class="sobre-mim">
+                <div class="sobre-mim-teste">
+                    <h1>Um pouco sobre mim:</h1>
+                    <p> Olá! Eu sou a Barbara Laís, uma artista apaixonada por biscuit. Minha jornada no mundo do biscuit começou de forma simples, com um enfeite de Dia das Mães que me inspirou a explorar mais a fundo essa arte incrível. Desde então, comecei a criar não apenas enfeites, mas também Funko Pops, canetas personalizadas e figuras encantadoras.</p>
+
+                    <p> Minha dedicação e amor pelo biscuit me levaram a conquistar o título de campeã no concurso "TEKINHA 2023", e hoje tenho a honra de contar com vários patrocínios que apoiam e celebram meu trabalho. Cada peça que faço é uma expressão do meu carinho e criatividade, transformando o biscuit em verdadeiras obras de arte.</p>
+
+                    <p>Estou empolgada para compartilhar meu trabalho com você e espero que minhas criações tragam um toque especial ao seu dia.</p>
+
+                </div>
+
+            
+                <div class="p2-mim">
+                    <img id="img-mim" style="width: 450px;" src="/imagens/sobre-mim-profile.svg" alt="barbaralais_oficial">
+                </div>
+                <div class="p2-mim-2">
+                        <img id="img-mim" style="height: 300px;" src="/imagens/img-mim-p2.svg" alt="barbaralais_oficial">
+                </div>
+                <div class="p2-mim-3">
+                    <img style="height: 300px;" src="/imagens/tek-img.svg" alt="barbaralais_oficial">
+                </div>
+                
+            </div>
+            
+                
             </div>
 
             <hr>
@@ -197,9 +255,11 @@
                 
 
             </div>
-
-        <hr>
             
+        </div>
+        <hr>
+        <div class="entrega-banner">
+            <img id="banner-entrega" src="/imagens/entrega - banner.svg" alt="">
         </div>
 
         <div class="footer">
@@ -211,19 +271,19 @@
                     </div>
                     <div class="redes">
                         <div class="rede insta">
-                            <div class="icon-in"><img src="imagens/inst-icon.svg" alt="insta" style="height: 55px;"></div>
+                            <div class="icon-in"><a href="https://www.instagram.com/barbaralais_oficial/"><img src="imagens/inst-icon.svg" alt="insta" style="height: 55px;"></a></div>
                             <div>
                                 <p>@barbaralais_oficial</p>
                             </div>
                         </div>
                         <div class="rede pinter">
-                            <div class="icon-pi"><img src="imagens/pin-icon.svg" alt="insta" style="height: 50px;"></div>
+                            <div class="icon-pi"><a href="https://br.pinterest.com/barbaralaisartesa/?invite_code=26a11dc49e624f3db5f1fb2fe17eaa3a&sender=862298797311748736"><img src="imagens/pin-icon.svg" alt="insta" style="height: 50px;"></a></div>
                             <div>
                                 <p>barbaralaisartesa</p>
                             </div>
                         </div>
                         <div class="rede whats">
-                            <div class="icon-wa"><img src="imagens/whats-icon.svg" alt="insta" style="height: 50px;"></div>
+                            <div class="icon-wa"><a href="https://wa.me/c/5511978588187"><img src="imagens/whats-icon.svg" alt="insta" style="height: 50px;"></a></div>
                             <div>
                                 <p>(11) 97858-8187</p>
                             </div>
