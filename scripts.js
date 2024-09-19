@@ -5,6 +5,37 @@ fetch('./data.json')
     })
     .catch(error => alert('Erro ao carregar o JSON:', error));
 
+function criarCartao(nome, preço, tipo, imagem, container){
+    const divAlvo = document.getElementById(container)
+    // Percorre os itens do carrinho e cria os elementos da grid
+        const itemElement = document.createElement('div');
+        itemElement.className = 'cart-item';
+    
+        // Adiciona conteúdo ao item
+        itemElement.innerHTML = `
+        <div class="cart-item-info">
+            <div class="card 1">
+                <div class="imag" style="background-image: url(${imagem});"></div>
+                <div class="legenda">
+                    <div class="nomes">
+                        <div class="names">
+                            <div class="title">${tipo}</div>
+                            <div class="carac">${nome}</div>
+                        </div>
+                </div>
+                    
+                        <div class="acoes">
+                            <div class="valor">🛒R$${preço}</div>
+                            <button onclick="adicionarAoCarrinho('${nome}', ${preço}, '${tipo}', '${imagem}' )">Adicionar Ao Carrinho</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+        `;
+    
+        // Adiciona o item à grid do carrinho
+        divAlvo.appendChild(itemElement);
+}
 
 function catalogoInicial(){
     document.getElementById('catalogo-teste').innerText = ''
@@ -101,38 +132,6 @@ function telaInicialCartoes(){
     })
 }
 
-function criarCartao(nome, preço, tipo, imagem, container){
-    const divAlvo = document.getElementById(container)
-    // Percorre os itens do carrinho e cria os elementos da grid
-        const itemElement = document.createElement('div');
-        itemElement.className = 'cart-item';
-  
-        // Adiciona conteúdo ao item
-        itemElement.innerHTML = `
-        <div class="cart-item-info">
-            <div class="card 1">
-                <div class="imag" style="background-image: url(${imagem});"></div>
-                <div class="legenda">
-                    <div class="nomes">
-                        <div class="names">
-                            <div class="title">${tipo}</div>
-                            <div class="carac">${nome}</div>
-                        </div>
-                </div>
-                    
-                        <div class="acoes">
-                            <div class="valor">🛒R$${preço}</div>
-                            <button onclick="adicionarAoCarrinho('${nome}', ${preço}, '${tipo}', '${imagem}' )">Adicionar Ao Carrinho</button>
-                        </div>
-                </div>
-            </div>
-        </div>
-        `;
-  
-        // Adiciona o item à grid do carrinho
-        divAlvo.appendChild(itemElement);
-    }
-
 // Adiciona o produto ao carrinho
 function adicionarAoCarrinho(nome, preco, tipo, imagem) {
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
@@ -206,23 +205,16 @@ function atualizarCarrinho() {
 }
 
 function comprar() {
-    // Get the modal
     var modal = document.getElementById("myModal");
 
-    // Get the button that opens the modal
-
-    // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
     
-    // When the user clicks the button, open the modal 
     modal.style.display = "block";
     
-    // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
         modal.style.display = "none";
     }
     
-    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
         modal.style.display = "none";
@@ -284,25 +276,18 @@ document.getElementById('metodos-pagamento').addEventListener('change', function
 )
 
 function modal(item){
-        // Get the modal
         var modal = document.getElementById("myModal");
     
-        // Get the button that opens the modal
-
-        // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
         
-        // When the user clicks the button, open the modal 
         modal.style.display = "block";
 
         document.getElementById("modal-body").innerHTML = `O produto "${item}" foi adicionado ao seu carrinho!`
         
-        // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
             modal.style.display = "none";
         }
         
-        // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
             if (event.target == modal) {
             modal.style.display = "none";
@@ -321,7 +306,7 @@ document.addEventListener('DOMContentLoaded', atualizarCarrinho);
 
 
 document.addEventListener("keypress", function onEvent(event) {
-    if (event.key === "Enter") {
+    if (event.key == "Enter") {
         pesquisaCatalogo()
     }
 });

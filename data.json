@@ -65,8 +65,8 @@
         }
         ,
         {
-            "nome": "Funko Pop | Goro",
-            "tipo": "Funko Pop",
+            "nome": "Figura | Goro",
+            "tipo": "Figura",
             "preço": 150.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/figura_goro.png"

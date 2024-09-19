@@ -17,45 +17,63 @@
 
 // Carrossel de imagens
 
-const slider = document.querySelectorAll('.slider')
-const btnPrev = document.getElementById('prev-button')
-const btnNext = document.getElementById('next-button')
+// const slider = document.querySelectorAll('.slider')
+// const btnPrev = document.getElementById('prev-button')
+// const btnNext = document.getElementById('next-button')
 
-let currentSlide = 0
+// let currentSlide = 0
 
-function hideSlider(){
-    slider.forEach(item => item.classList.remove('on'))
+// function hideSlider(){
+//     slider.forEach(item => item.classList.remove('on'))
+// }
+
+// function showSlider(){
+//     slider[currentSlide].classList.add('on')
+// }
+
+// function nextSlider(){
+//     hideSlider()
+
+//     if(currentSlide === slider.length - 1){
+//         currentSlide = 0
+//     }
+//     else{
+//         currentSlide++
+//     }
+//     showSlider()
+// }
+
+// function prevSlider(){
+//     hideSlider()
+
+//     if(currentSlide === 0){
+//         currentSlide = slider.length - 1
+//     }
+//     else{
+//         currentSlide--
+//     }
+//     showSlider()
+// }
+
+// btnNext.addEventListener('click', nextSlider)
+// btnPrev.addEventListener('click', prevSlider)
+
+// console.log(slider)
+
+let cont = 1
+document.getElementById('radio1').checked = true
+    nextSlide()
+setInterval( function(){
+
+}, 1000)
+
+function nextSlide(){
+    cont++
+
+    if(cont > 3){
+        cont = 1
+    }
+
+    document.getElementById('radio' + cont).checked = true
 }
 
-function showSlider(){
-    slider[currentSlide].classList.add('on')
-}
-
-function nextSlider(){
-    hideSlider()
-
-    if(currentSlide === slider.length - 1){
-        currentSlide = 0
-    }
-    else{
-        currentSlide++
-    }
-    showSlider()
-}
-
-function prevSlider(){
-    hideSlider()
-
-    if(currentSlide === 0){
-        currentSlide = slider.length - 1
-    }
-    else{
-        currentSlide--
-    }
-    showSlider()
-}
-
-btnNext.addEventListener('click', nextSlider)
-btnPrev.addEventListener('click', prevSlider)
-
-console.log(slider)
