@@ -459,6 +459,9 @@ font-size: 15pt;
     height: 100%;
     max-height: 450px;
     padding: 10px 0 100px;
+    animation: appear2 1ms ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: cover 0% cover 20%;
 }
 
 /* configurando "um pouco sobre mim:" */
@@ -504,6 +507,9 @@ font-size: 15pt;
     grid-area: sobre-mim-teste;
     margin: 0;
     padding: 0;
+    animation: appear1 1ms ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: cover 0% cover 40%;
 }
 
 .sobre-mim-teste h1{
@@ -525,19 +531,29 @@ font-size: 15pt;
     grid-area: p2-mim;
     margin: 0;
     padding: 0;
+    animation: appear 1ms ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: cover 0% cover 40%;
 }
 
 .p2-mim-2 {
     grid-area: p2-mim-2;
     margin: 0;
     padding: 0;
+    animation: appear 1ms ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: cover 0% cover 40%;
 }
 
 .p2-mim-3{
     grid-area: p2-mim-3;
     margin: 0;
     padding: 0;
+    animation: appear1 1ms ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: cover 0% cover 40%;
 }
+
 #img-mim {
     display: block; /* Remove o espaço abaixo das imagens */
     max-width: 100%; /* Ajusta a largura máxima da imagem para se ajustar ao seu contêiner */
@@ -548,7 +564,59 @@ adicionando um espaçamento no final: */
 
 .produtos, .sobre-mim, .patrocinios{
     padding-bottom: 20px;
+    animation: appear 1ms ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: cover 0% cover 40%;
 }
+
+.patrocinios-container img{
+    animation: appear2 1ms ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: cover 0% cover 40%;
+
+}
+/* adicionando animações: */
+
+@keyframes appear{
+    from{
+      opacity: 0;
+      translate: -100vh 0;
+    }
+  
+    to{
+      opacity: 1;
+      translate: 0 0;
+    }
+}
+
+/* apper1 vem da esquerda */
+
+@keyframes appear1{
+    from{
+      opacity: 0;
+      translate: 100vh 0;
+    }
+  
+    to{
+      opacity: 1;
+      translate: 0 0;
+    }
+}
+
+@keyframes appear2{
+    from{
+      opacity: 0;
+      translate: 0 100vh;
+    }
+  
+    to{
+      opacity: 1;
+      translate: 0 0;
+    }
+}
+
+
+
 footer{
     display: flex;
     justify-content: center;
