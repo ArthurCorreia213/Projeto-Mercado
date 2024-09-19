@@ -6,7 +6,7 @@ body{
 
 .slider{
     margin: 0 auto;
-    width: 1900px;
+    width: 1865px;
     height: 800px;
     overflow: hidden;
 }
@@ -29,12 +29,12 @@ body{
 }
 
 .slide img{
-    width: 1900px;
+    width: 1865px;
 }
 
 .manual-navigation{
     position: absolute;
-    width: 1900px;
+    width: 1865px;
     margin-top: 700px;
     display: flex;
     justify-content: center;
@@ -42,16 +42,16 @@ body{
 
 .manual-btn{
     border: 2px solid white;
-    padding: 5px;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 40px;
     cursor: pointer;
     transition: 0.5s;
 }
 
-.manual-btn label{
+/* .manual-btn label{
     width: 20px;
     height: 20px;
-}
+} */
 
 .manual-btn:not(:last-child){
     margin-right: 50px;
@@ -75,15 +75,15 @@ body{
 
 .navigation-auto div{
     border: 2px solid blue;
-    padding: 5px;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 40px;
     cursor: pointer;
     transition: 0.5s;
 }
 
 .navigation-auto{
     position: absolute;
-    width: 100%;
+    width: 1865px;
     margin-top: 700px;
     display: flex;
     justify-content: center;
