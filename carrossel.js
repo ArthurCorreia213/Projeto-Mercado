@@ -60,20 +60,19 @@
 
 // console.log(slider)
 
-let cont = 1
+let count = 1
 document.getElementById('radio1').checked = true
-    nextSlide()
 setInterval( function(){
-
-}, 1000)
+    nextSlide()
+}, 4000)
 
 function nextSlide(){
-    cont++
+    count++
 
-    if(cont > 3){
-        cont = 1
+    if(count > 3){
+        count = 1
     }
 
-    document.getElementById('radio' + cont).checked = true
+    document.getElementById('radio' + count).checked = true
 }
 
