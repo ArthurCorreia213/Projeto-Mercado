@@ -15,7 +15,7 @@ function criarCartao(nome, preço, tipo, imagem, container){
         itemElement.innerHTML = `
         <div class="cart-item-info">
             <div class="card 1">
-                <div class="imag" style="background-image: url(${imagem});"></div>
+                <div class="imag" onclick="produtoModal('${nome}', ${preço}, '${tipo}','${imagem}')"" style="background-image: url(${imagem});"></div>
                 <div class="legenda">
                     <div class="nomes">
                         <div class="names">
@@ -237,8 +237,11 @@ document.getElementById('metodos-pagamento').addEventListener('change', function
     if(metodo === 'cartao'){
         document.getElementById('pagamento_form').innerHTML = `
         <form>
+        
         <label for="nome">Nome Completo: </label>
-        <input type="text" id="nome"><br>
+        <input type="text" id="nome">
+        
+        <br>
 
         <label for="cpf">CPF: </label>
         <input type="number" id="cpf"><br><br>
@@ -293,6 +296,32 @@ function modal(item){
             modal.style.display = "none";
             }
         }
+}
+
+
+function produtoModal(nome, preço, tipo, imagem){
+    document.getElementById('imagem-produto-info').style.backgroundImage = `url('${imagem}')`;
+    document.getElementById('produto-info-caracteristicas').innerHTML = 
+    `Nome: ${nome}<br>
+    Preço: ${preço}<br>
+    Tipo: ${tipo}<br>
+    `
+
+    var modal = document.getElementById("produto-info-modal");
+
+    var span = document.getElementsByClassName("fechar")[0];
+    
+    modal.style.display = "block";
+    
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    
+    window.onclick = function(event) {
+        if (event.target == modal) {
+        modal.style.display = "none";
+        }
+    }
 }
 
 function numeroDeItensCarrinho(){
