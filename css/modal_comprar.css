@@ -49,9 +49,52 @@
     padding: 2px 16px;
     background-color: #5cb85c;
     color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
   }
   
-  #modal-body {padding: 10px 16px;}
+  #modal-body {
+    padding: 10px 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  #pagamento_form{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+  }
+
+  #pagamento_form a{
+    font-style: none !important;
+    color: #5cb85c;
+
+  }
+
+  #pagamento_form form{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 10%;
+    gap: 10px;
+  }
+
+  #pagamento_form button{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    font-style: normal;
+    border: none;
+    background-color:  #FECD23;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+
+  }
+
   
   .modal-footer {
     padding: 14px;
