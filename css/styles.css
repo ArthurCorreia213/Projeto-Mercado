@@ -517,11 +517,7 @@ font-size: 15pt;
     padding: 10px 0 100px;
     animation: appear2 1ms ease-in-out forwards;
     animation-timeline: view();
-<<<<<<< HEAD
     animation-range: cover 0% cover 18%;
-=======
-    animation-range: cover 0% cover 20%;
->>>>>>> 55d48a125b92272803bf87fc1b45386a5f2a6f78
 }
 
 /* configurando "um pouco sobre mim:" */
@@ -557,11 +553,22 @@ font-size: 15pt;
         flex-direction: column;
         
     }
-    .inkway, .tekbond, .saramanil, .imballa, .biscuit-loja{
+    .inkway, .tekbond, .saramanil, .imballa, .biscuit-loja, .tintas-aquolor{
         height: 150px;
         align-items: column;
     }
+
+    
+    
 }
+
+@media (max-width: 768px) {
+    .slide img {
+      width: 100%; /* Ajusta a imagem para 100% da largura do slide */
+      height: auto; /* Mantém a proporção da imagem */
+    }
+  }
+
 
 .sobre-mim-teste {
     grid-area: sobre-mim-teste;
@@ -569,11 +576,7 @@ font-size: 15pt;
     padding: 0;
     animation: appear1 1ms ease-in-out forwards;
     animation-timeline: view();
-<<<<<<< HEAD
     animation-range: cover 0% cover 18%;
-=======
-    animation-range: cover 0% cover 40%;
->>>>>>> 55d48a125b92272803bf87fc1b45386a5f2a6f78
 }
 
 .sobre-mim-teste h1{
@@ -609,11 +612,7 @@ font-size: 15pt;
     padding: 0;
     animation: appear 1ms ease-in-out forwards;
     animation-timeline: view();
-<<<<<<< HEAD
-    animation-range: cover 0% cover 18%;
-=======
     animation-range: cover 0% cover 40%;
->>>>>>> 55d48a125b92272803bf87fc1b45386a5f2a6f78
 }
 
 .p2-mim-3{
@@ -622,11 +621,7 @@ font-size: 15pt;
     padding: 0;
     animation: appear1 1ms ease-in-out forwards;
     animation-timeline: view();
-<<<<<<< HEAD
-    animation-range: cover 0% cover 18%;
-=======
     animation-range: cover 0% cover 40%;
->>>>>>> 55d48a125b92272803bf87fc1b45386a5f2a6f78
 }
 
 #img-mim {
@@ -639,34 +634,26 @@ adicionando um espaçamento no final: */
 
 .produtos{
     margin-top: 5%;
+    animation: appear 1ms ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: cover 0% cover 15%;
 }
 
-.produtos, .sobre-mim, .patrocinios{
+.sobre-mim, .patrocinios{
     padding-bottom: 20px;
     animation: appear 1ms ease-in-out forwards;
     animation-timeline: view();
-<<<<<<< HEAD
-    animation-range: cover 0% cover 18%;
-}
-.patrocinios-container img{
-    animation: appear2 1ms ease-in-out forwards;
-    animation-timeline: view();
-    animation-range: cover 0% cover 18%;
-}
-/* adicionando animações: */
-=======
-    animation-range: cover 0% cover 40%;
+    animation-range: cover 0% cover 20%;
 }
 
 .patrocinios-container img{
     animation: appear2 1ms ease-in-out forwards;
     animation-timeline: view();
-    animation-range: cover 0% cover 40%;
+    animation-range: cover 0% cover 20%;
 
 }
 /* adicionando animações: */
 
->>>>>>> 55d48a125b92272803bf87fc1b45386a5f2a6f78
 @keyframes appear{
     from{
       opacity: 0;
@@ -678,13 +665,9 @@ adicionando um espaçamento no final: */
       translate: 0 0;
     }
 }
-<<<<<<< HEAD
-/* apper1 vem da esquerda */
-=======
 
 /* apper1 vem da esquerda */
 
->>>>>>> 55d48a125b92272803bf87fc1b45386a5f2a6f78
 @keyframes appear1{
     from{
       opacity: 0;
@@ -696,10 +679,6 @@ adicionando um espaçamento no final: */
       translate: 0 0;
     }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 55d48a125b92272803bf87fc1b45386a5f2a6f78
 @keyframes appear2{
     from{
       opacity: 0;
@@ -713,10 +692,6 @@ adicionando um espaçamento no final: */
 }
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 55d48a125b92272803bf87fc1b45386a5f2a6f78
 footer{
     display: flex;
     justify-content: center;
