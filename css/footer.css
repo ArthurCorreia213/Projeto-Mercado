@@ -68,4 +68,13 @@ body{
     padding: 10px 30px;
     gap: 40px;
 }
+/* 
+responsividade: */
 
+@media (max-width: 678px) {
+
+    .f-ti-p1{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

@@ -50,3 +50,14 @@ body{
     margin-left: -20%;
     margin-top: -8%;
 }
+
+@media (max-width: 678px) {
+
+    .header{
+        display: flex;
+        flex-wrap: wrap;
+        height: 110px;
+
+    }
+    
+}
