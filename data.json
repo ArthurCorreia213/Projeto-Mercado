@@ -6,8 +6,8 @@
             "preço": 100.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/funko_dr_estranho.png",
-            "descricao": "Este Funko Pop do Doutor Estranho é uma verdadeira obra de arte em biscuit, capturando o manto flutuante e a expressão enigmática do Mago Supremo. Ele é ideal para quem ama o universo Marvel e quer trazer um pouco da magia e mistério de suas aventuras para casa."
-            
+            "descricao": "Este Funko Pop do Doutor Estranho é uma verdadeira obra de arte em biscuit, capturando o manto flutuante e a expressão enigmática do Mago Supremo. Ele é ideal para quem ama o universo Marvel e quer trazer um pouco da magia e mistério de suas aventuras para casa.",
+            "tamanho":"7,62 x 7,62 x 15,5 centímetros"
         }
         ,
         {
@@ -16,7 +16,8 @@
             "preço": 90.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/figura_coraline.png",
-            "descricao": "A figura de Coraline é um tributo à corajosa menina que desbrava mundos alternativos. Com seu cabelo azul vibrante e a famosa jaqueta amarela, esta peça é perfeita para fãs do filme e da história que nos ensina sobre bravura e autodescoberta."
+            "descricao": "A figura de Coraline é um tributo à corajosa menina que desbrava mundos alternativos. Com seu cabelo azul vibrante e a famosa jaqueta amarela, esta peça é perfeita para fãs do filme e da história que nos ensina sobre bravura e autodescoberta.",
+            "tamanho":"11,9 x 12 x 20 centímetros"
         }
         ,
         {
@@ -25,7 +26,8 @@
             "preço": 90.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/figura_tio_patinhas.png",
-            "descricao": "O icônico Tio Patinhas, retratado em biscuit, exibe sua pose clássica, pronta para aventuras e tesouros. Os detalhes são encantadores, refletindo sua personalidade avarenta e destemida, ideal para colecionadores e fãs de Disney."
+            "descricao": "O icônico Tio Patinhas, retratado em biscuit, exibe sua pose clássica, pronta para aventuras e tesouros. Os detalhes são encantadores, refletindo sua personalidade avarenta e destemida, ideal para colecionadores e fãs de Disney.",
+            "tamanho":"11,9 x 12 x 20 centímetros"
         }
         ,
         {
@@ -34,7 +36,8 @@
             "preço": 50.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/caneta_gru.png",
-            "descricao": "Esta caneta traz o humor e a diversão de 'Meu Malvado Favorito' com um design colorido e divertido. É perfeita para alegrar suas anotações diárias, transformando tarefas simples em momentos de alegria."
+            "descricao":"Esta caneta traz o humor e a diversão de Meu Malvado Favorito com um design colorido e divertido. É perfeita para alegrar suas anotações diárias, transformando tarefas simples em momentos de alegria.",
+            "tamanho":"13,5 x 1,5 x 1,5 centímetros"
         }
         ,
         {
@@ -43,7 +46,8 @@
             "preço": 45.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/caneta_bulbasauro.png",
-            "descricao": "Inspirada no adorável Bulbasauro, esta caneta combina funcionalidade com o charme do Pokémon. Suas cores vibrantes e formato simpático fazem dela uma companheira ideal para qualquer amante de Pokémon que deseja adicionar um toque especial ao seu dia a dia."
+            "descricao": "Inspirada no adorável Bulbasauro, esta caneta combina funcionalidade com o charme do Pokémon. Suas cores vibrantes e formato simpático fazem dela uma companheira ideal para qualquer amante de Pokémon que deseja adicionar um toque especial ao seu dia a dia.",
+            "tamanho":"13,5 x 1,5 x 1,5 centímetros"
         }
         ,
         {
@@ -52,7 +56,8 @@
             "preço": 150.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/figura_pikachu.png",
-            "descricao":"A figura do Pikachu é um encanto à parte, capturando a energia e a alegria desse Pokémon tão querido. Com detalhes cuidadosos, ela simboliza a amizade e a aventura, sendo uma peça perfeita para fãs de todas as idades."
+            "descricao":"A figura do Pikachu é um encanto à parte, capturando a energia e a alegria desse Pokémon tão querido. Com detalhes cuidadosos, ela simboliza a amizade e a aventura, sendo uma peça perfeita para fãs de todas as idades.",
+            "tamanho":"11,9 x 12 x 20 centímetros"
         }
         ,
         {
@@ -61,7 +66,8 @@
             "preço": 60.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/figura_pink.png",
-            "descricao":"Pink, do clássico desenho, é uma figura cheia de charme e travessura. Com seu estilo vibrante e expressões cativantes, ela traz um toque de nostalgia e diversão, ideal para os fãs do personagem."
+            "descricao":"Pink, do clássico desenho, é uma figura cheia de charme e travessura. Com seu estilo vibrante e expressões cativantes, ela traz um toque de nostalgia e diversão, ideal para os fãs do personagem.",
+            "tamanho":"11,9 x 12 x 20 centímetros"
         }
         ,
         {
@@ -70,7 +76,8 @@
             "preço": 60.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/figura_cerebro.png",
-            "descricao":"A figura de Cerebro, ao lado de Pink, representa a astúcia e a inteligência do famoso vilão. Com detalhes bem elaborados, ela é perfeita para quem adora a dinâmica entre esses dois personagens carismáticos."
+            "descricao":"A figura de Cerebro, ao lado de Pink, representa a astúcia e a inteligência do famoso vilão. Com detalhes bem elaborados, ela é perfeita para quem adora a dinâmica entre esses dois personagens carismáticos.",
+            "tamanho":"11,9 x 12 x 20 centímetros"
         }
         ,
         {
@@ -79,7 +86,8 @@
             "preço": 150.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/figura_goro.png",
-            "descricao":"Este Goro imponente é uma peça detalhada que representa a força e a bravura do lutador de Mortal Kombat. Sua presença marcante torna esta figura um item indispensável para os fãs do universo dos games e das batalhas épicas."
+            "descricao":"Este Goro imponente é uma peça detalhada que representa a força e a bravura do lutador de Mortal Kombat. Sua presença marcante torna esta figura um item indispensável para os fãs do universo dos games e das batalhas épicas.",
+            "tamanho":"11,9 x 12 x 20 centímetros"
         }
         ,
         {
@@ -88,7 +96,8 @@
             "preço": 160.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/figura_simba.png",
-            "descricao":"A figura do jovem Simba é um lindo retrato de sua jornada de autodescoberta. Com uma expressão determinada e detalhes que refletem a beleza da savana, ela captura a essência da bravura e da amizade do Rei Leão."
+            "descricao":"A figura do jovem Simba é um lindo retrato de sua jornada de autodescoberta. Com uma expressão determinada e detalhes que refletem a beleza da savana, ela captura a essência da bravura e da amizade do Rei Leão.",
+            "tamanho":"11,9 x 12 x 20 centímetros"
         }
         ,
         {
@@ -97,7 +106,8 @@
             "preço": 120.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/figura_pooh_leitao.png",
-            "descricao":"Este adorável duo de Pooh e Leitão retrata a verdadeira essência da amizade no Bosque dos 100 Acres. Os detalhes carinhosos e a expressão alegre fazem desta figura um clássico que encanta crianças e adultos. "
+            "descricao":"Este adorável duo de Pooh e Leitão retrata a verdadeira essência da amizade no Bosque dos 100 Acres. Os detalhes carinhosos e a expressão alegre fazem desta figura um clássico que encanta crianças e adultos. ",
+            "tamanho":"11,9 x 12 x 20 centímetros"
         }
         ,
         {
@@ -106,7 +116,8 @@
             "preço": 60.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/caneta_angelica_pickles.png",
-            "descricao":"Com a personalidade forte da Angélica, esta caneta é perfeita para trazer um toque de nostalgia e diversão às suas anotações. Seu design vibrante reflete a energia da personagem, tornando a escrita ainda mais divertida."
+            "descricao":"Com a personalidade forte da Angélica, esta caneta é perfeita para trazer um toque de nostalgia e diversão às suas anotações. Seu design vibrante reflete a energia da personagem, tornando a escrita ainda mais divertida.",
+            "tamanho":"13,5 x 1,5 x 1,5 centímetros"
         }
         ,
         {
@@ -115,7 +126,8 @@
             "preço": 80.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/figura_luigi.png",
-            "descricao":"Luigi, na sua versão fantasmagórica, é uma figura divertida que captura o espírito aventureiro do irmão do Mario. Com um olhar curioso e detalhes encantadores, é ideal para os fãs do universo Nintendo."
+            "descricao":"Luigi, na sua versão fantasmagórica, é uma figura divertida que captura o espírito aventureiro do irmão do Mario. Com um olhar curioso e detalhes encantadores, é ideal para os fãs do universo Nintendo.",
+            "tamanho":"11,9 x 12 x 20 centímetros"
         }
         ,
         {
@@ -124,7 +136,8 @@
             "preço": 100.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/figura_grogu.png",
-            "descricao":"O amado Baby Yoda é uma figura irresistível, com seu olhar adorável e detalhes que refletem sua personalidade única. É uma peça essencial para os fãs de Star Wars que desejam ter um pedaço da Força em casa."
+            "descricao":"O amado Baby Yoda é uma figura irresistível, com seu olhar adorável e detalhes que refletem sua personalidade única. É uma peça essencial para os fãs de Star Wars que desejam ter um pedaço da Força em casa.",
+            "tamanho":"11,9 x 12 x 20 centímetros"
         }
         ,
         {
@@ -133,7 +146,8 @@
             "preço": 90.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/figura_pokemon.png",
-            "descricao":"Esta figura celebra a diversidade do universo Pokémon, capturando a essência de vários monstrinhos de bolso. Com detalhes vibrantes, é uma peça perfeita para qualquer fã que deseja reviver suas aventuras."
+            "descricao":"Esta figura celebra a diversidade do universo Pokémon, capturando a essência de vários monstrinhos de bolso. Com detalhes vibrantes, é uma peça perfeita para qualquer fã que deseja reviver suas aventuras.",
+            "tamanho":"11,9 x 12 x 20 centímetros"
         }
         ,
         {
@@ -142,7 +156,8 @@
             "preço": 130.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/figura_anne.png",
-            "descricao":"O Funko Pop da Anne é uma representação encantadora da protagonista de 'Anne with an E'. Com detalhes que capturam seu espírito aventureiro e sonhador, é ideal para fãs que amam histórias de superação."
+            "descricao":"O Funko Pop da Anne é uma representação encantadora da protagonista de Anne with an E. Com detalhes que capturam seu espírito aventureiro e sonhador, é ideal para fãs que amam histórias de superação.",
+            "tamanho":"7,62 x 7,62 x 15,5 centímetros"
         }
         ,
         {
@@ -151,7 +166,8 @@
             "preço": 90.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/figura_penelope.png",
-            "descricao":"Esta figura de Penelope é um doce tributo ao seu estilo único e extravagante. Com cores vivas e detalhes elaborados, ela traz um toque de magia do mundo dos jogos, perfeita para colecionadores."
+            "descricao":"Esta figura de Penelope é um doce tributo ao seu estilo único e extravagante. Com cores vivas e detalhes elaborados, ela traz um toque de magia do mundo dos jogos, perfeita para colecionadores.",
+            "tamanho":"11,9 x 12 x 20 centímetros"
         }
         ,
         {
@@ -160,7 +176,8 @@
             "preço": 110.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/funko_jao.png",
-            "descricao":"Este Funko Pop do cantor Jão captura a essência carismática do artista, trazendo um pouco de sua música para sua coleção. É uma peça perfeita para fãs que querem celebrar seu talento."
+            "descricao":"Este Funko Pop do cantor Jão captura a essência carismática do artista, trazendo um pouco de sua música para sua coleção. É uma peça perfeita para fãs que querem celebrar seu talento.",
+            "tamanho":"7,62 x 7,62 x 15,5 centímetros"
         }
         ,
         {
@@ -169,7 +186,8 @@
             "preço": 65.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/caneta_subway_surfers.png",
-            "descricao":"Inspirada no jogo popular, esta caneta é vibrante e cheia de energia, perfeita para quem ama a adrenalina das corridas. É uma forma divertida de expressar sua paixão por games no dia a dia."
+            "descricao":"Inspirada no jogo popular, esta caneta é vibrante e cheia de energia, perfeita para quem ama a adrenalina das corridas. É uma forma divertida de expressar sua paixão por games no dia a dia.",
+            "tamanho":"13,5 x 1,5 x 1,5 centímetros"
         }
         ,
         {
@@ -178,7 +196,8 @@
             "preço": 70.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/caneta_arca_de_noe.png",
-            "descricao":"Esta caneta traz a magia da história da Arca de Noé, com um design criativo que remete à aventura e à preservação. Ideal para quem ama histórias clássicas com um toque especial."
+            "descricao":"Esta caneta traz a magia da história da Arca de Noé, com um design criativo que remete à aventura e à preservação. Ideal para quem ama histórias clássicas com um toque especial.",
+            "tamanho":"13,5 x 1,5 x 1,5 centímetros"
         }
         ,
         {
@@ -187,7 +206,8 @@
             "preço": 110.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/figura_pequeno_principe.png",
-            "descricao":"A figura do Pequeno Príncipe é um lembrete poético sobre a amizade e a imaginação. Com detalhes encantadores, ela é perfeita para quem valoriza as lições profundas contidas na história."
+            "descricao":"A figura do Pequeno Príncipe é um lembrete poético sobre a amizade e a imaginação. Com detalhes encantadores, ela é perfeita para quem valoriza as lições profundas contidas na história.",
+            "tamanho":"11,9 x 12 x 20 centímetros"
         }
         ,
         {
@@ -196,7 +216,8 @@
             "preço": 90.00,
             "quantidade": 1,
             "imagem":"imagens/catalogo/figura_choso.png",
-            "descricao":"Choso, do universo de Jujutsu Kaisen, é uma figura impressionante que captura sua força e singularidade. Com detalhes elaborados, é uma peça essencial para os fãs do anime e suas batalhas emocionantes."
+            "descricao":"Choso, do universo de Jujutsu Kaisen, é uma figura impressionante que captura sua força e singularidade. Com detalhes elaborados, é uma peça essencial para os fãs do anime e suas batalhas emocionantes.",
+            "tamanho":"11,9 x 12 x 20 centímetros"
         }
     ]
 }

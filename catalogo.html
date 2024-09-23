@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <link rel="shortcut icon" type="imagex/png" href="/imagens/icone1.svg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo</title>
@@ -9,16 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nanum+Gothic:wght@400;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/footer.css">
-<link rel="stylesheet" href="css/header.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
     <style>
         /* *{border: 1px solid red;} */
 
         body{
             text-align: center;
             transition: 0.1s ease-in;
+            overflow-x: hidden;
         }
         
         #catalogo-teste {
@@ -110,6 +112,23 @@
             border: none;
             border-radius: 2px;
         }
+
+        @media (max-width: 768px) {
+
+    #filtros-container{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 50px;
+
+    }
+
+    /* #produto-info-modal{
+        display: flex;
+        flex-wrap: wrap;
+    } */
+  }
         /* main{display: flex;} */
 
         /*Configurando footer:*/
@@ -225,17 +244,6 @@ main{
     font-style: normal;
 }
 
-#imagem-produto-info{
-    width: 50.5%;
-    height: 780px;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-#produto-info-caracteristicas{
-    width: 30%;
-    height: 780px;
-}
-
 /* confiGURANDO ANIMAÇÕES: */
 
 @keyframes appear2{
@@ -257,6 +265,22 @@ main{
 </head>
 <body onload="catalogoInicial()">
     
+  <!-- Modal teste pagina produto -->
+<div id="produto-info-modal" class="modal">
+
+    <div class="modal-produto-info">
+      <div class="modal-header">
+        <span class="fechar">&times;</span>
+        <h2>Informações do produto</h2>
+      </div>
+      <div id="modal-corpo">
+          <div id="imagem-produto-info"></div>
+          <div id="produto-info-caracteristicas"></div>
+      </div>
+    </div>
+  </div>
+  </div>
+
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
@@ -274,22 +298,6 @@ main{
   </div>
 </div>
 
-
-  <!-- Modal teste pagina produto -->
-<div id="produto-info-modal" class="modal">
-
-  <div class="modal-produto-info">
-    <div class="modal-header">
-      <span class="fechar">&times;</span>
-      <h2>Produto adicionado ao carrinho</h2>
-    </div>
-    <div id="modal-corpo">
-        <div id="imagem-produto-info" style="border: 0px solid red"></div>
-        <div id="produto-info-caracteristicas" style="border: 3px solid blue"></div>
-    </div>
-  </div>
-</div>
-</div>
 
     <div class="header">
         <div class="titulo">

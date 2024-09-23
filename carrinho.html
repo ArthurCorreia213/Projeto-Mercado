@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <link rel="shortcut icon" type="imagex/png" href="/imagens/icone1.svg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho de Compras</title>
@@ -143,6 +144,43 @@
         width: 50%;
         height: 50%;
     }
+
+    @media (max-width: 768px) {
+
+#banner{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+
+}
+
+#banner img{
+    height: 100px;
+}
+
+.cart-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cart-item #produto_nome{
+    font-size: 1em;
+
+}
+
+#comprar{
+    font-size: 0.8em;
+    height: 50px;
+    width: 70px;
+}
+}
+
+#total_comprar{
+    padding: 30px;
+}
 
     </style>
 </head>

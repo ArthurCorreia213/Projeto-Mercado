@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <link rel="shortcut icon" type="imagex/png" href="/imagens/icone1.svg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barbara Laís - Artesã</title>
@@ -16,9 +17,29 @@
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 16px;
         text-align: center;
+        /* margin-left: 22%; */
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        padding-left: 0;
+        }
+
+        /* @media (max-width: 768px) {
+
+            #produtos, #funkos, #figuras, #canetas{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        text-align: center;
         margin-left: 22%;
         width: 60%;
-        }
+        } */
+
+/* #produto-info-modal{
+    display: flex;
+    flex-wrap: wrap;
+} */
 
         .title{
             font-family: "Roboto", sans-serif;
@@ -33,10 +54,29 @@
         hr{
             width: 80%;
         }
+
+        .imag:hover{
+            cursor: pointer;
+        }
     
     </style>
 </head>
 <body onload="telaInicialCartoes()">
+
+<div id="produto-info-modal" class="modal">
+
+    <div class="modal-produto-info">
+        <div class="modal-header">
+        <span class="fechar">&times;</span>
+        <h2>Informações do produto</h2>
+        </div>
+        <div id="modal-corpo">
+            <div id="imagem-produto-info"></div>
+            <div id="produto-info-caracteristicas"></div>
+        </div>
+    </div>
+    </div>
+    </div>
 
     <!-- The Modal -->
 <div id="myModal" class="modal">

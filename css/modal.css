@@ -81,6 +81,7 @@
   
   .modal-header {
     padding: 2px 16px;
+    height: 6.5vh;
     background-color: #5cb85c;
     color: white;
     font-family: "Roboto", sans-serif;
@@ -114,9 +115,55 @@
   }
 
   .modal-footer a{
-    text-decoration: none;
     color: #fefefe;
   }
+
+
+  
+  #imagem-produto-info{
+    width: 54vw;
+    height: 82.5vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#produto-info-caracteristicas{
+    width: 52.5vw;
+    height: 80vh;
+    margin-top: 1vw;
+    text-align: left;
+    padding-top: 1vh;
+}
+
+#produto-infos{
+    display: inline-block;
+    margin-left: 8%;
+    border-bottom: 1px solid lightgray;
+    font-size: 1.2vw;
+}
+
+#produto-infos-descricao{ 
+    margin-left: 8%;
+    font-size: 1vw;
+    /* border-bottom: 1px solid lightgray; */
+}
+
+#botao-comprar-modal{
+    background-color: #0a996f;
+    color: white;
+    border-radius: 10px;
+    margin-left: 8%;
+    width: 15%;
+    height: 5%;
+    border: none;
+    transition: ease-in-out 200ms all;
+    font-size: 1vw;
+}
+
+#botao-comprar-modal:hover{
+    background-color: #FFC700;
+    transform: scale(1.1);
+
+}
 
   /* Add Animation */
   @-webkit-keyframes slideIn {

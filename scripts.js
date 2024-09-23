@@ -5,71 +5,59 @@ fetch('./data.json')
     })
     .catch(error => alert('Erro ao carregar o JSON:', error));
 
-function criarCartao(nome, preço, tipo, imagem, container){
-    const divAlvo = document.getElementById(container)
-    // Percorre os itens do carrinho e cria os elementos da grid
+    function criarCartao(nome, preço, tipo, imagem, container, tamanho, descricao) {
+        const divAlvo = document.getElementById(container);
         const itemElement = document.createElement('div');
         itemElement.className = 'cart-item';
     
-        // Adiciona conteúdo ao item
         itemElement.innerHTML = `
         <div class="cart-item-info">
             <div class="card 1">
-                <div class="imag" onclick="produtoModal('${nome}', ${preço}, '${tipo}','${imagem}')"" style="background-image: url(${imagem});"></div>
+                <div class="imag" onclick="produtoModal('${nome}', ${preço}, '${tipo}', '${imagem}', '${tamanho}', '${descricao}')" style="background-image: url(${imagem});"></div>
                 <div class="legenda">
                     <div class="nomes">
                         <div class="names">
                             <div class="title">${tipo}</div>
                             <div class="carac">${nome}</div>
                         </div>
-                </div>
-                    
-                        <div class="acoes">
-                            <div class="valor">🛒R$${preço}</div>
-                            <button onclick="adicionarAoCarrinho('${nome}', ${preço}, '${tipo}', '${imagem}' )">Adicionar Ao Carrinho</button>
-                        </div>
+                    </div>
+                    <div class="acoes">
+                        <div class="valor">🛒R$${preço}</div>
+                        <button onclick="adicionarAoCarrinho('${nome}', ${preço}, '${tipo}', '${imagem}')">Adicionar Ao Carrinho</button>
+                    </div>
                 </div>
             </div>
         </div>
         `;
-    
-        // Adiciona o item à grid do carrinho
+
         divAlvo.appendChild(itemElement);
-}
+    }
 
 function catalogoInicial(){
     document.getElementById('catalogo-teste').innerText = ''
     catalogo = JSON.parse(localStorage.getItem('catalogo'))
-    catalogo.forEach(item => criarCartao(item.nome, item.preço, item.tipo, item.imagem, 'catalogo-teste'))
+    catalogo.forEach(item => criarCartao(item.nome, item.preço, item.tipo, item.imagem, 'catalogo-teste', item.tamanho, item.descricao))
 }
 
-function filtroOpcoes(){
-    const filtro_funko = document.getElementById('filtro_funko_pop').checked
-    const filtro_figura = document.getElementById('filtro_figura').checked
-    const filtro_canetas = document.getElementById('filtro_caneta').checked
-
-    const filtro_teste = [filtro_funko, filtro_figura, filtro_canetas]
-
-    let filtros = []
-
-    for(let i = 0; i<=2; i++){
-        if(filtro_teste[i] === true){
-            if(i === 0){filtros.push("Funko Pop")}
-            else if(i === 1){filtros.push("Figura")}
-            else if(i === 2){filtros.push("Caneta")}
-        }
-    }
-    if(filtros.length != 0){
-        return filtros
-    }
-    else{return 0}
-}
+//PESQUISA CATALOGO (CÓDIGO):
 
 function pesquisaCatalogo(){
     const pesquisa_texto = document.getElementById("texto_pesquisa").value.toLowerCase()
     const container = document.getElementById('catalogo-teste');
     let catalogo = JSON.parse(localStorage.getItem('catalogo'))
-    filtros = filtroOpcoes()
+
+    filtros = []
+
+    if(document.getElementById('filtro_funko_pop').checked === true){
+        filtros.push("Funko Pop")
+    }
+    if(document.getElementById('filtro_figura').checked === true){
+        filtros.push("Figura")
+    }
+    if(document.getElementById('filtro_caneta').checked === true){
+        filtros.push("Caneta")
+    }
+
     ordenar = document.getElementById('opcoes-ordenar').value
 
     switch(true){
@@ -87,12 +75,12 @@ function pesquisaCatalogo(){
             break;
     }
 
-    if (filtros != 0){
+    if (filtros.length != 0){
         container.innerHTML = ''
         catalogo.forEach(produto =>{
             nomeLower = produto.nome.toLowerCase()
             if(nomeLower.includes(pesquisa_texto) && filtros.includes(produto.tipo)){
-                criarCartao(produto.nome, produto.preço, produto.tipo, produto.imagem, 'catalogo-teste')
+                criarCartao(produto.nome, produto.preço, produto.tipo, produto.imagem, 'catalogo-teste', produto.tamanho, produto.descricao)
             }
         })
     }
@@ -101,7 +89,7 @@ function pesquisaCatalogo(){
         catalogo.forEach(produto =>{
             nomeLower = produto.nome.toLowerCase()
             if(nomeLower.includes(pesquisa_texto)){
-                criarCartao(produto.nome, produto.preço, produto.tipo, produto.imagem, 'catalogo-teste')
+                criarCartao(produto.nome, produto.preço, produto.tipo, produto.imagem, 'catalogo-teste', produto.tamanho, produto.descricao)
             }
         })
     }
@@ -109,6 +97,9 @@ function pesquisaCatalogo(){
         container.innerHTML = `<h1 id="nada_encontrado">Nenhum produto com o nome "${pesquisa_texto}" encontrado</h1>`
     }
 }
+
+//FIM PESQUISA DO CATÁLOGO
+
 
 function telaInicialCartoes(){
     const catalogo = JSON.parse(localStorage.getItem('catalogo'))
@@ -118,21 +109,20 @@ function telaInicialCartoes(){
         switch(true){
             case(produto.tipo == "Funko Pop" && funkos < 3):
                 funkos++
-                criarCartao(produto.nome, produto.preço, produto.tipo, produto.imagem, "funkos")
+                criarCartao(produto.nome, produto.preço, produto.tipo, produto.imagem, "funkos", produto.tamanho, produto.descricao)
                 break;
             case(produto.tipo == "Caneta" && canetas < 3):
                 canetas++
-                criarCartao(produto.nome, produto.preço, produto.tipo, produto.imagem, 'canetas')
+                criarCartao(produto.nome, produto.preço, produto.tipo, produto.imagem, 'canetas', produto.tamanho, produto.descricao)
                 break;
             case(produto.tipo == "Figura" && figuras < 3):
                 figuras++
-                criarCartao(produto.nome, produto.preço, produto.tipo, produto.imagem, 'figuras')
+                criarCartao(produto.nome, produto.preço, produto.tipo, produto.imagem, 'figuras', produto.tamanho, produto.descricao)
                 break;
         }
     })
 }
 
-// Adiciona o produto ao carrinho
 function adicionarAoCarrinho(nome, preco, tipo, imagem) {
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
     
@@ -146,7 +136,6 @@ function adicionarAoCarrinho(nome, preco, tipo, imagem) {
     }
     
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
-    // alert(nome + ' foi adicionado ao carrinho!');
 
     modal(nome)
     numeroDeItensCarrinho()
@@ -183,7 +172,6 @@ function atualizarCarrinho() {
         const itemElement = document.createElement('div');
         itemElement.className = 'cart-item';
 
-        // Adiciona conteúdo ao item
         itemElement.innerHTML = `
         <div id="imagen"><img src="${item.imagem}"></div>
         <div id="tipo_produto">${item.tipo} <h2 id="produto_nome">${item.nome}</h2></div>
@@ -194,15 +182,19 @@ function atualizarCarrinho() {
         </div>
         `;
 
-        // Adiciona o item à grid do carrinho
         carrinhoContainer.appendChild(itemElement);
 
-        // Calcula o total do carrinho
+ 
         total += item.preco * item.quantidade;
     });
 
     totalContainer.innerText = `Total: R$${total.toFixed(2)}`;
 }
+
+
+
+//FIM FUNÇÃO DE ADICIONAR (RELACIONADO AO CARRINH)
+//FUNÇÃO ""/FORMULÁRIO
 
 function comprar() {
     var modal = document.getElementById("myModal");
@@ -299,12 +291,17 @@ function modal(item){
 }
 
 
-function produtoModal(nome, preço, tipo, imagem){
+function produtoModal(nome, preço, tipo, imagem, tamanho, descricao){
     document.getElementById('imagem-produto-info').style.backgroundImage = `url('${imagem}')`;
     document.getElementById('produto-info-caracteristicas').innerHTML = 
-    `Nome: ${nome}<br>
-    Preço: ${preço}<br>
-    Tipo: ${tipo}<br>
+    `<h2 id="produto-infos">Nome: ${nome}</h2><br>
+    <h2 id="produto-infos">Preço: R$${preço.toFixed(2)}</h2><br>
+    <h2 id="produto-infos">Tipo: ${tipo}</h2><br>
+    <h2 id="produto-infos">Proporções: ${tamanho}</h2><br>
+    <hr>
+    <h2 id="produto-infos">Descrição:<br></h2> <h3 id="produto-infos-descricao">${descricao}</h3>
+
+    <button id="botao-comprar-modal" onclick="adicionarAoCarrinho('${nome}', ${preço}, '${tipo}', '${imagem}' )">Comprar</button>
     `
 
     var modal = document.getElementById("produto-info-modal");
@@ -332,10 +329,3 @@ function numeroDeItensCarrinho(){
 document.addEventListener('DOMContentLoaded', numeroDeItensCarrinho);
 
 document.addEventListener('DOMContentLoaded', atualizarCarrinho);
-
-
-document.addEventListener("keypress", function onEvent(event) {
-    if (event.key == "Enter") {
-        pesquisaCatalogo()
-    }
-});

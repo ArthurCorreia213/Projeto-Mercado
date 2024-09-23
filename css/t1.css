@@ -50,6 +50,9 @@ flex-grow: 1;
     border-radius: 5px;
 }
 
+.imag:hover{
+    cursor: pointer;
+}
 /* #dois{
     background-image: url(../imagens/celebro-svg.svg);
 
