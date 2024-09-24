@@ -21,7 +21,7 @@ https://github.com/user-attachments/assets/b188e302-4a14-495d-a121-ed65cedee085
 
 https://github.com/user-attachments/assets/48304dc8-02e2-4307-aa0e-c050c8366c91
 
-  <a href="#" target="_blank">
+  <a href="https://arthurcorreia213.github.io/Projeto-Mercado/" target="_blank">
     <img height="30px" src="https://img.shields.io/badge/Deploy-Barbara%20Laís%20Artesã-00D1B2?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
 
